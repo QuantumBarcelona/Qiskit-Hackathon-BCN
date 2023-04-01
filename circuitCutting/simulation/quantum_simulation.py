@@ -2,17 +2,16 @@ import os
 
 import matplotlib.pyplot as plt
 import numpy as np
-from lib.measures import measure_from_label
 
 plt.rcParams.update({"font.size": 16})  # enlarge fonts
 
 import sys
 
-sys.path.append("..")
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import json
 
 from lib.circuits.step1 import *
+from lib.measures import measure_from_label
 from qiskit import QuantumCircuit, transpile
 from qiskit.quantum_info import Statevector
 from qiskit.quantum_info.operators import Operator
@@ -31,7 +30,7 @@ backend = provider.get_backend(backend_name, instance=f"{hub}/{group}/{project}"
 
 Z = Operator.from_label("Z")
 
-shots: int = 100  # Number of shots to run each circuit for
+shots: int = 1000  # Number of shots to run each circuit for
 outFolder = os.path.join(os.path.dirname(__file__), "quantum_out")
 
 
@@ -149,7 +148,7 @@ JSON["main"]["counts"] = counts
 expectedVal = np.real(
     sum(
         [
-            Statevector.from_label(outcome).expectation_value(Z ^ Z ^ Z) * count / shots
+            Statevector.from_label(outcome).expectation_value(Z ^ Z ^ Z ^ Z ^ Z) * count / shots
             for outcome, count in counts.items()
         ]
     )
