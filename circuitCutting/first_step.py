@@ -26,10 +26,10 @@ from lib.measures import Xmeasure, Ymeasure
 cricFraction1.measure(1, 0)
 cricFraction1.draw(output="mpl")
 
-Xmeasure(cricFraction1, 1, 1)
-cricFraction1.draw(output="mpl")
+# Xmeasure(cricFraction1, 1, 1)
+# cricFraction1.draw(output="mpl")
 
-Ymeasure(cricFraction1, 1, 3)
-cricFraction1.draw(output="mpl")
+# Ymeasure(cricFraction1, 1, 2)
+# cricFraction1.draw(output="mpl")
 
 # %%
