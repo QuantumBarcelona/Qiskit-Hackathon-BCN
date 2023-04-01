@@ -4,7 +4,7 @@ import numpy as np
 
 plt.rcParams.update({"font.size": 16})  # enlarge fonts
 
-from lib.step1 import *
+from lib.circuits.step1 import *
 
 # Import standard qiskit modules
 from qiskit import QuantumCircuit, QuantumRegister, execute

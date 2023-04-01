@@ -11,4 +11,5 @@ from qiskit.quantum_info import Statevector
 def cutted_statevalues(circ,cq):
     # Creation of different cq states circuits:
     qnum = QuantumCircuit.num_qubits(circ)
-    
+    stateVector = Statevector.from_instruction(circ)
+    expect_0 = stateVector.expectation_value()
