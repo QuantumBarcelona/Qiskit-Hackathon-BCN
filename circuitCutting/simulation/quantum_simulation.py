@@ -13,17 +13,10 @@ sys.path.append("..")
 import json
 
 from lib.circuits.step1 import *
-
-# Import standard qiskit modules
-from qiskit import IBMQ, Aer, QuantumCircuit, QuantumRegister, execute, transpile
-
-# For doing exact simulation you can use Statevector (feel free to use something else)
+from qiskit import QuantumCircuit, transpile
 from qiskit.quantum_info import Statevector
 from qiskit.quantum_info.operators import Operator
 from qiskit_ibm_provider import IBMProvider
-
-# loading IBMQ account
-
 
 provider = IBMProvider()
 
