@@ -52,6 +52,8 @@ You don't need to have experience in quantum computing, but some basic programmi
 
 Challenges can be found in the [Challenges](challenges/) folder of this repository.
 
+On the [How To Connect](How_To_Connect.ipynb) Notebook you can find some useful information about how to connect to the IBM platform for the hackathon.
+
 ## **Teams**
 
 | Team Number | Team Members |
