@@ -20,3 +20,5 @@ cricFraction2.draw(output="mpl")
 mainCircuit.draw(output="mpl")
 
 # %%
+# Measure the cubit 1 from the first circuit
+cricFraction1.measure(1, 0)
