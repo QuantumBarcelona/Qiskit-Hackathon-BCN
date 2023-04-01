@@ -28,8 +28,3 @@ from qiskit.quantum_info.operators import Operator
 X = Operator.from_label("X")
 circ = get_circ2()
 expVal = cutted_statevalues(circ,2,X^X^X)
-
-# %%
-
-# Qiskit flips the vector
-expVal = cutted_statevalues(circ, 0, X ^ X ^ X)
