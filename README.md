@@ -11,6 +11,7 @@ The Qiskit Hackathon Barcelona is an immersive competition featuring live engage
    * [Requirements](#requirements)
    * [Built With](#built-with)
    * [License](#license)
+   * [Support](#support)
    * [Authors](#authors)
    * [Bibliography](#bibliography)
 
