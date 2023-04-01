@@ -5,6 +5,6 @@ from qiskit.quantum_info import Statevector
 import matplotlib.pyplot as mpl
 
 # %%
-mainCircuit = Xmeasure(mainCircuit,range(3),range(3))
-mainCircuit.draw(output="mpl")
+mainCirc = Xmeasure(mainCircuit,range(3),range(3))
+mainCirc.draw(output="mpl")
 # %%
