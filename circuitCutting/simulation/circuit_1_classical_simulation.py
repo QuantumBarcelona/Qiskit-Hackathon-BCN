@@ -9,8 +9,10 @@ import sys
 sys.path.append("..")
 
 from lib.circuits.step1 import *
+
 # Import standard qiskit modules
 from qiskit import Aer, QuantumCircuit, QuantumRegister, execute
+
 # For doing exact simulation you can use Statevector (feel free to use something else)
 from qiskit.quantum_info import Statevector
 from qiskit.quantum_info.operators import Operator
@@ -51,12 +53,15 @@ for m in expectedValues.keys():
     result = job.result()
     counts = result.get_counts(circ)
 
-    expectedValues[m] = sum(
-        [
-            np.real(Statevector.from_label(key).expectation_value(Z ^ Z ^ Z)) * count / shots
-            for key, count in counts.items()
-        ]
-    )
+    if m != "I":
+        expectedValues[m] = sum(
+            [
+                np.real(Statevector.from_label(label).expectation_value(Z ^ Z ^ Z)) * count / shots
+                for label, count in counts.items()
+            ]
+        )
+    else:
+        expectedValues[m] = sum(counts.values()) / shots
 
     plt.figure()
     plt.bar(counts.keys(), counts.values())
