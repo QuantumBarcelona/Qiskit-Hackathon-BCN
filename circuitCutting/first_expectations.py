@@ -21,13 +21,6 @@ Z = Operator.from_label("Z")
 I = Operator.from_label("I")
 
 # %%
-get_mainCirc().draw(output="mpl")
-# %%
-get_circ1().draw(output="mpl")
-# %%
-get_circ2().draw(output="mpl")
-
-# %%
 
 # This initializes the statevector at the |0> state (all zeros), and then evolves it under the circuit
 stateVector = Statevector.from_instruction(get_circ1())

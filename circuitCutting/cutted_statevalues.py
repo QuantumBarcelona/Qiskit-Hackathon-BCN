@@ -14,8 +14,7 @@ def cutted_statevalues(circ, cq, op):
     qnum = circ.num_qubits
     expVal = []
     for c in ["0", "1", "+", "-", "r", "l", "0", "1"]:
-        label = "0" * (cq) + c + "0" * (qnum - cq - 1)
-        #print(label)
+        label = "0" * (qnum - cq - 1) + c + "0" * (cq)
         stateVector = Statevector.from_label(label)
         print(stateVector)
         final = stateVector.evolve(circ)
@@ -30,8 +29,3 @@ from qiskit.quantum_info.operators import Operator
 X = Operator.from_label("X")
 circ = get_circ2()
 expVal = cutted_statevalues(circ,2,X^X^X)
-# %%
-
-expVal = cutted_statevalues(circ, 2, X ^ X ^ X)
-
-# %%
