@@ -1,3 +1,4 @@
+# %%
 import matplotlib.pyplot as plt 
 import numpy as np
 
@@ -9,9 +10,9 @@ def expected_X_split_ciruit(n):
     expected_X_split_ciruit = n**3
     return
 
-full_circuit_error = nd.array(1000,dtype=float)
-split_circuit_error = nd.array(1000,dtype=float)
-N = range(1000,10000,100)
+full_circuit_error = np.ndarray(1000,dtype=float)
+split_circuit_error = np.ndarray(1000,dtype=float)
+N = range(100,10000,1)
 
 full_circuit_error = [expected_X_full_ciruit(n) for n in N]
 split_circuit_error = [expected_X_split_ciruit(n) for n in N]
@@ -19,6 +20,9 @@ split_circuit_error = [expected_X_split_ciruit(n) for n in N]
 fig, ax = plt.subplots()
 ax.plot(N,full_circuit_error)
 ax.plot(N,split_circuit_error)
+# ax.xax(N[0],N[-1])
+# ax.yax(expected_X_split_ciruit[0],expected_X_split_ciruit[-1])
 
-ax.set_yscale('log')
+# ax.set_yscale('log')
 plt.show()
+# %%
