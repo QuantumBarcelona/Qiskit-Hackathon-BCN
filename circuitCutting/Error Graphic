@@ -5,8 +5,8 @@ def expected_X_full_ciruit(n):
     expected_X_full_ciruit = n**2
     return
 
-def expected_X_split_ciruit():
-    expected_X_split_ciruit = N**3
+def expected_X_split_ciruit(n):
+    expected_X_split_ciruit = n**3
     return
 
 full_circuit_error = nd.array(1000,dtype=float)
