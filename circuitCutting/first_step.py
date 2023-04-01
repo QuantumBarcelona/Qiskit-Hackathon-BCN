@@ -20,5 +20,16 @@ cricFraction2.draw(output="mpl")
 mainCircuit.draw(output="mpl")
 
 # %%
+from lib.measures import Xmeasure, Ymeasure
+
 # Measure the cubit 1 from the first circuit
 cricFraction1.measure(1, 0)
+cricFraction1.draw(output="mpl")
+
+Xmeasure(cricFraction1, 1, 1)
+cricFraction1.draw(output="mpl")
+
+Ymeasure(cricFraction1, 1, 3)
+cricFraction1.draw(output="mpl")
+
+# %%

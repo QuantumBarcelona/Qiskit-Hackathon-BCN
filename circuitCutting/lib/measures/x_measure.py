@@ -4,4 +4,7 @@ def Xmeasure(circuit, qubit, cbit):
     """
     circuit.h(qubit)
     circuit.measure(qubit, cbit)
+
+    circuit.h(qubit)
+
     return circuit
