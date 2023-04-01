@@ -11,5 +11,8 @@ expectedValues = [expected_i, expected_i, expected_x, expected_x, expected_y, ex
 totalExpectation = 0
 for prod in zip(coefficients, expectedValues, pt2expectedValues):
     totalExpectation += np.prod(prod)
+    print(prod)
 
 print("Final expectation:", totalExpectation)
+
+# %%
