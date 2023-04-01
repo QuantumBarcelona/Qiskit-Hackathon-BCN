@@ -28,4 +28,5 @@ circ.cx(2, 3)
 circ.rx(np.pi / 2, 2)
 circ.barrier(range(5))
 circ.measure((range(5)), (range(5)))
-circ.draw(output="mpl")
+
+# %%

@@ -13,13 +13,14 @@ from qiskit.quantum_info import Statevector
 # %%
 # SECOND PART CIRCUIT
 
-circ2 = QuantumCircuit(5, 5)
-circ2.h(range(1, 3))
+circ2 = QuantumCircuit(3,3)
+circ2.h(range(3))
+circ2.rx(np.pi / 2, 0)
+circ2.rx(np.pi / 5, 2)
+circ2.cx(2,0)
+circ2.rx(np.pi / 2, 0)
+circ2.cx(1,2)
 circ2.rx(np.pi / 2, 1)
-circ2.rx(np.pi / 2, 3)
-circ2.cx(3, 1)
-circ2.rx(np.pi / 2, 1)
-circ2.cx(2, 3)
-circ2.rx(np.pi / 2, 2)
-circ2.draw()
 
+
+# %%
