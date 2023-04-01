@@ -1,61 +1,88 @@
-# **Welcome to Qiskit Hackathon BCN 2023**
+<img src="https://github.com/migueldemollet/Qiskit-Hackathon-BCN/Resources/computer.jpg" align="right" width="300" alt="header pic"/>
 
-## 📄  [Click here to access the In-Person Attendee Guide](https://docs.google.com/presentation/d/1nfg607ooJaA4KhBDBFBsJHK_Io-5Qm-0)
+# **Qiskit Hackathon BCN 2023**
 
-## **About**
+The Qiskit Hackathon Barcelona is an immersive competition featuring live engagement, teamwork, and mentorship by expert researchers, developers and advocates.
 
+# Table of Contents
+   * [What is this?](#what-is-this)
+   * [Project Structure](#project-structure)
+   * [Requirements](#requirements)
+   * [Built With](#built-with)
+   * [License](#license)
+   * [Authors](#authors)
+   * [Bibliography](#bibliography)
+
+# What is this?
 The Qiskit Hackathon Barcelona is an immersive competition featuring live engagement, teamwork, and mentorship by expert researchers, developers and advocates.
 
 This event is being organized with the colaboration of: Institute of Photonic Sciences (ICFO), IBM Quantum, Barcelona Supercomputing Center (BSC), Moody's, Qiskit Community, Quantum Barcelona, Institut de Física d'Altes Energies (IFAE), and hosted by Universitat Autònoma de Barcelona (UAB).
 
-The Qiskit Hackathon will take place from 1st to 2nd April in Escola d'Enginyeria UAB (Barcelona), Spain.
+# Project Structure
+All the code is located in the src folder.
+The challenges folder contains the challenges that we have to solve. The requirements.txt file contains all the required libraries to run the code. The gitignore file contains the files that are not uploaded to the repository. The Resources folder contains all the resources used in the project.
+The LICENSE file contains the license of the project.
+The README.md file is the file you are currently reading.
+```
+├──challenges
+│   ├──IBM_challenge_description.md
+├──Resources
+│   ├──computer.jpg
+├──src
+│   ├──notebook.ipynb
+├──.gitignore
+├──README.md
+├──LICENSE
+├──requirements.txt
+```
 
-Participants will have 24 hours to work in teams to develop solutions to problems in the field of quantum computing and present it to a panel of judges.
 
-Even though the hackathon will be done in teams of 6 people, there will be a team activity at the begining of the event.
-So don't be afraid to come alone or without a complete team. Let's meet each other!
+# Requirements
 
-## **Challenges**
+For running each sample code:
 
-Challenges will be proposed by some of the top experts from IBM Quantum, ICFO, Moody’s and the Barcelona Supercomputing Center.
-You don't need to have experience in quantum computing, but some basic programming knowledge is recommended.
+- [Python 3.9.x](https://www.python.org/)
+- [Qiskit 0.42](https://qiskit.org/)
+- [Numpy](https://numpy.org/)
+- [Matplotlib](https://matplotlib.org/)
 
-Challenges can be found in the [Challenges](challenges/) folder of this repository.
+# How to use
 
-On the [How To Connect](How_To_Connect.ipynb) Notebook you can find some useful information about how to connect to the IBM platform for the hackathon.
+1. Clone this repo.
 
-## **Teams**
+> git clone https://github.com/migueldemollet/Qiskit-Hackathon-BCN.git
 
-### **Take note of your team number, as you will need it to submit your code.**
+2. Go to the directory where the code is located.
 
-| Team Number | Challenge | Team Name | Team Members |
-| :---------: | :-------: | :-------: | :----------: |
-| **Team 1** | IBM | **Qbit Enjoyers** | Mohammad Sahrawaz, Hala Siddig Elhog, David Romero Sánchez, Daniel Saavedra Mayor, Gonzalo Garcia Navarro, Arturo Veiga Sebastián |
-| **Team 2** | IBM | **Team QuPics** | Guillerme Botelho, Boris Müllendorff, Gerard Marcet, Pau Escofet, Bart Segers, Diago Ramos |
-| **Team 3** | BSC | **QuteBits** | Hayato Ishida, Marco Paradina, Abdulelah Almimoni, Vignesh Anantharamakrishnan |
-| **Team 4** | BSC | **Q-Buddies** | Gabriel De Araujo, Oriol De Miguel, Gokarna Dumre, Ho June Kim, Jorge Plazas |
-| **Team 5** | MOODY'S | **Black-school** | Adrià Blanco, Pau Torrente, Felix Xu, Rita Li |
-| **Team 6** | IBM | **Team Mr. Worldwide** | Xiang Lin, Ireneo B. Ntutumu, Adrià Mateos, Diana Mirila, Omar Bajja |
-| **Team 7** | MOODY'S | **Team Mike Co.** | Miguel Carrasco Arango, Lucía Longo Balagué, Miguel Durán Vera, Iván Villar Naredo, Miguel Álvarez Hernane, Manuel Porrón Álvarez |
-| **Team 8** | MOODY'S | **Schrödinger Stonks** | Fran Adillón, Adrià Calm, Guillem Alvarez, Gerard Guarin, Rubén Ledesma, Arnau Fornaguera |
-| **Team 9** | ICFO | **Orangejuice** | Ana Sànchez, Derik Rochlitzen, Miquel Àngel Pérez, Pere Bancells, Thierry Nicolas Kaldenbach, Timon Scheiber |
-| **Team 10** | BSC | **ANSGAM** | Ainhoa Castaño, Sergi Bons, Nil Fernandez, Marc Subirà, Aleix Llemas, Guillermo Abad |
-| **Team 11** | ICFO | **33** | Carlos Ramon Escandell, Eric Vidal, Marc Farreras, Enrique Naranjo, Francesc Sabater, Pau Fargas |
-| **Team 12** | IBM | **Team Coyotech** | Juan Manuel Camara, Juan Carlos Martinez, Miguel del Arco, Christian Ferre, Daniel Suarez, Luis Fernando Paz |
-| **Team 13** | ICFO | **Los quanticos lokos** | Amir Azzam, Héctor Briongos, Todor Krasimirov, Teo Parella, Jordi Romero, Jan Nogué |
-| **Team 14** | ICFO | **Trotterizers** | Arnau Diebra, Sara del Pozo, Cristian Iñiguez, Misael Samir Malqui Cruz, Mohamed Ouali, Adnan Parwez |
-| **Team 15** | BSC | **Plan B** | Marc Parcerisa, Ferran R. Macaró, Jordi Torres, Berta Bori |
+> cd Qiskit-Hackathon-BCN
 
-## **How to use this repository**
+3. Install the required libraries.
+ 
+using pip :
 
-This repository contains the code you need to participate in the Hackathon. However, it is not meant to be used as a working environment. You should use your own environment to develop your code.
+> pip install -r requirements.txt
 
-One of your team members should **fork** this repository and add the rest of the team as collaborators. This way, you will be able to work on the same code.
+using conda :
 
-When the final code submission is ready, you should create a pull request to this repository, targeting the branch allocated for your team. This way, the judges will be able to review your code.
-We expect you to submit your code **ONLY** at the end of the hackathon, and only once with a single pull request (although you can make as many commits as you want).
+Create a new environment with the required libraries and python version.
 
-## Questions
+> conda create --name name_example --file requirements.txt python=3.9
 
-If you have any questions, please ask the team of Qiskit Mentors at the event or post them in the dedicated Qiskit Event
-Slack Channel [#bcn-hackathon-2023](https://qiskit.slack.com/archives/C04UARD1LDC) [[Click here to join Qiskit Slack](https://ibm.co/joinqiskitslack), if needed].
+# Built With
+- [VSCode](https://code.visualstudio.com/) - Code editor to program
+- [Python](https://www.python.org/) - Language used for programming.
+
+# License
+This project is under the MIT License - see the [LICENSE](https://github.com/migueldemollet/Qiskit-Hackathon-BCN/blob/main/LICENSE) file for details
+
+# Support 
+- [Escola d'Enginyeria - UAB Barcelona](https://www.uab.cat/enginyeria/)
+- [IBM Quantum](https://quantum-computing.ibm.com/)
+# Authors
+* **Juan Manuel Camara** - [juanmacaaz](https://github.com/juanmacaaz)
+* **Miguel del Arco** - [migueldemollet](https://github.com/migueldemollet)
+* **Daniel Suarez** - [Danny-8](https://github.com/Danny-8)
+* **Christian Ferre** - [christian-ferre](https://github.com/christian-ferre)
+
+# Bibliography
+- [Qiskit Documentation](https://qiskit.org/documentation/)
