@@ -1,4 +1,4 @@
-<img src="https://github.com/migueldemollet/Qiskit-Hackathon-BCN/blob/main/Resources/computer.jpg" align="right" width="300" alt="header pic"/>
+<img src="https://github.com/migueldemollet/Qiskit-Hackathon-BCN/blob/main/Resources/cat.jpeg" align="right" width="300" alt="header pic"/>
 
 # **Qiskit Hackathon BCN 2023**
 
