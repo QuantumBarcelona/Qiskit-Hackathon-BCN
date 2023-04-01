@@ -15,36 +15,6 @@ Participants will have 24 hours to work in teams to develop solutions to problem
 Even though the hackathon will be done in teams of 6 people, there will be a team activity at the begining of the event.
 So don't be afraid to come alone or without a complete team. Let's meet each other!
 
-## **Timeline**
-
-### Saturday 1th April
-
-**9:30** - Qiskit Hackathon Barcelona Presentation
-
-**10:00** - Presentation of ideas and challenges
-
-**11:00** - Team building
-
-**12:00** - Hackathon begins
-
-**14:00** - Lunch
-
-**15:00** - Hackathon continues
-
-**21:00** - Dinner
-
-**22:00 - 00:00 (Sunday)** - Hackathon continues
-
-### Sunday 2nd April
-
-**00:00 - 10:00** - Hackathon continues
-
-**12:00** - **Hackathon Ends!** - Presentation the final projects
-
-**13:00 - 14:00** - Judges ceremony and awards
-
-**14:00** - Networking
-
 ## **Challenges**
 
 Challenges will be proposed by some of the top experts from IBM Quantum, ICFO, Moody’s and the Barcelona Supercomputing Center.
