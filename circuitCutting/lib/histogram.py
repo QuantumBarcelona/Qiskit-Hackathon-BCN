@@ -13,3 +13,4 @@ def histogram(circ, s):
     result = job.result()
     counts = result.get_counts(circ)
     plot_histogram(counts)
+    return
