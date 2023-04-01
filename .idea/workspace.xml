@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c3967a3-6e21-4c51-b2a3-b2cd16b9550d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challenges/ICFO_challenge.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/ICFO_challenge.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +43,7 @@
       <workItem from="1680341596278" duration="2828000" />
       <workItem from="1680345037188" duration="24685000" />
       <workItem from="1680370163451" duration="133000" />
-      <workItem from="1680370399424" duration="4314000" />
+      <workItem from="1680370399424" duration="8778000" />
     </task>
     <servers />
   </component>
