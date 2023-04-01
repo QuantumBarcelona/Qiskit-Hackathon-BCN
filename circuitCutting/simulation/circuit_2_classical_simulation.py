@@ -28,15 +28,15 @@ backend = Aer.get_backend("qasm_simulator")
 shots = 1000
 expectedValues = {}
 
-preQubit = 0
+preQubit = 2
 
 for c in ["0", "1", "+", "-", "r", "l", "0", "1"]:
-    circ = get_circ2()
-    qubitCount = circ.num_qubits
-    label = "0" * (qubitCount - preQubit - 1) + c + "0" * (preQubit)
+    label = "0" * (3 - preQubit - 1) + c + "0" * (preQubit)
     stateVector = Statevector.from_label(label)
+    circ = QuantumCircuit(3, 3)
     # Initialize the vector on the simulation to be the statevector
     circ.initialize(stateVector, circ.qubits)
+    get_circ2(circ)
 
     from_label("XXX")(circ)
 
