@@ -19,9 +19,11 @@ q3 --> 1
 q4 --> 2
 """
 #
-circ1 = QuantumCircuit(3, 3)
-circ1.h([0, 1, 2])  # Hadamard gate
-circ1.cx(0, 2)  # Ctrl C gate (target, where applies gate)
-circ1.rx(np.pi / 2, 2)  # Rx gate
-circ1.cx(0, 1)
-circ1.rx(np.pi / 2, 0)
+def get_circ1():
+    circ1 = QuantumCircuit(3, 3)
+    circ1.h([0, 1, 2])  # Hadamard gate
+    circ1.cx(0, 2)  # Ctrl C gate (target, where applies gate)
+    circ1.rx(np.pi / 2, 2)  # Rx gate
+    circ1.cx(0, 1)
+    circ1.rx(np.pi / 2, 0)
+    return circ1

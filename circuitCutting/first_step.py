@@ -7,29 +7,41 @@ plt.rcParams.update({"font.size": 16})  # enlarge fonts
 from lib.step1 import *
 
 # Import standard qiskit modules
-from qiskit import QuantumCircuit, QuantumRegister
+from qiskit import QuantumCircuit, QuantumRegister, execute
 
 # For doing exact simulation you can use Statevector (feel free to use something else)
 from qiskit.quantum_info import Statevector
+from qiskit.quantum_info.operators import Operator
+
+#  %%
+# Matrix operators
+X = Operator.from_label("X")
+Y = Operator.from_label("Y")
+Z = Operator.from_label("Z")
+I = Operator.from_label("I")
 
 # %%
-cricFraction1.draw(output="mpl")
+get_mainCirc().draw(output="mpl")
 # %%
-cricFraction2.draw(output="mpl")
+get_circ1().draw(output="mpl")
 # %%
-mainCircuit.draw(output="mpl")
+get_circ2().draw(output="mpl")
 
 # %%
-from lib.measures import Xmeasure, Ymeasure
 
-# Measure the cubit 1 from the first circuit
-cricFraction1.measure(1, 0)
-cricFraction1.draw(output="mpl")
+# This initializes the statevector at the |0> state (all zeros), and then evolves it under the circuit
+stateVector = Statevector.from_instruction(get_circ1())
+print("State vector after the circuit:", stateVector)
 
-# Xmeasure(cricFraction1, 1, 1)
-# cricFraction1.draw(output="mpl")
+# Measureme X everywhere
+expected_x = stateVector.expectation_value(X ^ X ^ X)
+expected_y = stateVector.expectation_value(X ^ Y ^ X)
+expected_z = stateVector.expectation_value(X ^ Z ^ X)
+expected_i = stateVector.expectation_value(X ^ I ^ X)
 
-# Ymeasure(cricFraction1, 1, 2)
-# cricFraction1.draw(output="mpl")
+print("Expected value of X:", expected_x)
+print("Expected value of Y:", expected_y)
+print("Expected value of Z:", expected_z)
+print("Expected value of I:", expected_i)
 
 # %%
