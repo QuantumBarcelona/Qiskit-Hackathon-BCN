@@ -21,7 +21,7 @@ from qiskit.quantum_info import Statevector
 from qiskit.quantum_info.operators import Operator
 
 # %%
-def run_class_circ2(s):
+def run_class_circ2(s,makeGraph=True):
     Z = Operator.from_label("Z")
 
 
@@ -53,13 +53,13 @@ def run_class_circ2(s):
                 ]
             )
         )
-    
-        plt.figure()
-        plt.bar(counts.keys(), counts.values())
-        plt.title(f"Initial: |{label}$\\rangle$ ($\langle X\\rangle$ = {expectedValues[c]:.2f})")
-        plt.xlabel("Measurement outcome")
-        plt.ylabel("Counts")
-        plt.show()
+        if makeGraph == True:
+            plt.figure()
+            plt.bar(counts.keys(), counts.values())
+            plt.title(f"Initial: |{label}$\\rangle$ ($\langle X\\rangle$ = {expectedValues[c]:.2f})")
+            plt.xlabel("Measurement outcome")
+            plt.ylabel("Counts")
+            plt.show()
     return expectedValues
 
 expectedValues = run_class_circ2(1000)

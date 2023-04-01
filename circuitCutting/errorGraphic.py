@@ -6,12 +6,11 @@ from lib.executions import *
 from lib.measures import *
 from simulation.composed import totalExpectation
 from qiskit.quantum_info import Operator, Statevector
-from circuit_1_classical_simulation import \
-    expectedValues as circuit1expectations
-from circuit_2_classical_simulation import \
-    expectedValues as circuit2expectations
+from simulation.circuit_1_classical_simulation import run_class_circ1
+from simulation.circuit_2_classical_simulation import run_class_circ2
+from simulation.composed import recompose
 
-
+# Classic simulation for entire circuit
 def expX_class_full(n): # n = number of shots
     mainCirc = get_mainCirc()
     mainCircuit = Xmeasure(mainCirc, range(5), range(5))
@@ -29,32 +28,26 @@ def expX_class_full(n): # n = number of shots
 
     return expected_X
 
-def expX_class_split(n)
-    
-    expectation = totalExpectation
+# Classic simulation for split circuit
+def expX_class_split(n):
+    expect1 = run_class_circ1(n,makeGraph=False)
+    expect2 = run_class_circ2(n,makeGraph=False)
+    expectation = recompose(expect1,expect2)
     expected_X = np.abs(1.0-expectation)
-
     return expected_X
-
-
-
-    
-#     expected_X_split_ciruit = abs(1-expectation)
-#     return expected_X_split_ciruit
-
 
 N = list(range(1,100,1))
 full_circuit_error = np.ndarray(len(N),dtype=float)
 split_circuit_error = np.ndarray(len(N),dtype=float)
 
-full_circuit_error = [expected_X_full_ciruit(n) for n in N]
-# split_circuit_error = [expected_X_split_ciruit(n) for n in N]
+full_circuit_error = [expX_class_full(n) for n in N]
+split_circuit_error = [expX_class_split(n) for n in N]
 
 print(full_circuit_error)
 # print(split_circuit_error)
 
 fig, ax = plt.subplots()
-ax.plot(N,full_)
+ax.plot(N,full_circuit_error)
 ax.plot(N,split_circuit_error)
 
 ax.set_yscale('log')

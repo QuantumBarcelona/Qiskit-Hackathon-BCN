@@ -35,7 +35,7 @@ print("Expected value of I:", stateVector.expectation_value(X ^ I ^ X))
 
 # %%
 from lib.measures import from_label
-def run_class_circ1(s):
+def run_class_circ1(s,makeGraph=True):
     backend = Aer.get_backend("qasm_simulator")
     shots = s
     expectedValues = {
@@ -62,16 +62,16 @@ def run_class_circ1(s):
             )
         else:
             expectedValues[m] = sum(counts.values()) / shots
+        if makeGraph == True:
+            plt.figure()
+            plt.bar(counts.keys(), counts.values())
+            plt.title(f"Measurement {m} ($\langle {m}\\rangle$ = {expectedValues[m]:.2f})")
+            plt.xlabel("Measurement outcome")
+            plt.ylabel("Counts")
+            plt.show()
 
-        plt.figure()
-        plt.bar(counts.keys(), counts.values())
-        plt.title(f"Measurement {m} ($\langle {m}\\rangle$ = {expectedValues[m]:.2f})")
-        plt.xlabel("Measurement outcome")
-        plt.ylabel("Counts")
-        plt.show()
-    
     return expectedValues
 
-expectedValues = run_class_circ1(1000)
+expectedValues = run_class_circ1(1000,True)
 
 # %%
