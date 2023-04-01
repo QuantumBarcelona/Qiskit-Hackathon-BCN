@@ -3,9 +3,13 @@ from lib.circuits.step1 import *
 from lib.measures import *
 from qiskit.quantum_info import Statevector
 import matplotlib.pyplot as mpl
-
-# %%0
-mainCircuit = get_mainCirc()
-mainCirc = Xmeasure(mainCircuit,range(3),range(3))
+#%%
+mainCirc = get_mainCirc()
 mainCirc.draw(output="mpl")
+# Statevector + valor esperat
+# Statevector is from whole circuit!
+statevector = Statevector.from_instruction(mainCirc)
+print(statevector)
+
 # %%
+mainCirc = Xmeasure(mainCirc,range(5),range(5))
