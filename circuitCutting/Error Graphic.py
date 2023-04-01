@@ -20,7 +20,7 @@ def expected_X_full_ciruit(n):
         state = Statevector.from_label(key)
         expectation += state.expectation_value(Z ^ Z ^ Z ^ Z ^ Z) * times / totalTimes
   
-    expected_X_full_ciruit = np.abs(1-expectation)
+    expected_X_full_ciruit = np.abs(1.0-expectation)
 
     return expected_X_full_ciruit
 
