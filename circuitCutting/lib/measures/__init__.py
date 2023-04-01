@@ -1,2 +1,2 @@
-from .x_measure import XMeasure
-from .y_measure import YMeasure
+from .x_measure import Xmeasure
+from .y_measure import Ymeasure
