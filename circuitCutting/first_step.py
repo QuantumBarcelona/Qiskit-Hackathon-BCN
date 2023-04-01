@@ -4,6 +4,7 @@ import numpy as np
 
 plt.rcParams.update({"font.size": 16})  # enlarge fonts
 
+from lib.measures import Xmeasure, Ymeasure
 from lib.step1 import *
 
 # Import standard qiskit modules
@@ -13,23 +14,25 @@ from qiskit import QuantumCircuit, QuantumRegister
 from qiskit.quantum_info import Statevector
 
 # %%
-cricFraction1.draw(output="mpl")
+get_circ.draw(output="mpl")
 # %%
-cricFraction2.draw(output="mpl")
+get_circ1.draw(output="mpl")
 # %%
-mainCircuit.draw(output="mpl")
+get_circ2.draw(output="mpl")
 
 # %%
-from lib.measures import Xmeasure, Ymeasure
-
+# Create the first circuit
+cricFraction1 = get_circ1()
 # Measure the cubit 1 from the first circuit
 cricFraction1.measure(1, 0)
 cricFraction1.draw(output="mpl")
-
-# Xmeasure(cricFraction1, 1, 1)
-# cricFraction1.draw(output="mpl")
-
-# Ymeasure(cricFraction1, 1, 2)
-# cricFraction1.draw(output="mpl")
+# %%
+cricFraction1 = get_circ1()
+Xmeasure(cricFraction1, 1, 1)
+cricFraction1.draw(output="mpl")
+# %%
+cricFraction1 = get_circ1()
+Ymeasure(cricFraction1, 1, 2)
+cricFraction1.draw(output="mpl")
 
 # %%
