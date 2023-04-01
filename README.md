@@ -1,4 +1,4 @@
-<img src="https://github.com/migueldemollet/Qiskit-Hackathon-BCN/Resources/computer.jpg" align="right" width="300" alt="header pic"/>
+<img src="https://github.com/migueldemollet/Qiskit-Hackathon-BCN/blob/main/Resources/computer.jpg" align="right" width="300" alt="header pic"/>
 
 # **Qiskit Hackathon BCN 2023**
 
@@ -83,6 +83,9 @@ This project is under the MIT License - see the [LICENSE](https://github.com/mig
 * **Miguel del Arco** - [migueldemollet](https://github.com/migueldemollet)
 * **Daniel Suarez** - [Danny-8](https://github.com/Danny-8)
 * **Christian Ferre** - [christian-ferre](https://github.com/christian-ferre)
+* **Juan Carlos Moreno** - [juankaUAB](https://github.com/juankaUAB)
+* **Luis Fernando Paz** - [lferpaz](https://github.com/lferpaz)
+
 
 # Bibliography
 - [Qiskit Documentation](https://qiskit.org/documentation/)
