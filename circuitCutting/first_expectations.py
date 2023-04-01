@@ -43,3 +43,5 @@ print("Expected value of X:", expected_x)
 print("Expected value of Y:", expected_y)
 print("Expected value of Z:", expected_z)
 print("Expected value of I:", expected_i)
+
+# %%
