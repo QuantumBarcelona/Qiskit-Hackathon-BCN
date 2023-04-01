@@ -12,19 +12,6 @@ from qiskit import QuantumCircuit, QuantumRegister
 from qiskit.quantum_info import Statevector
 
 # %%
-# SECOND PART CIRCUIT
-
-circ2 = QuantumCircuit(5, 5)
-circ2.h(range(1, 3))
-circ2.rx(np.pi / 2, 1)
-circ2.rx(np.pi / 2, 3)
-circ2.cx(3, 1)
-circ2.rx(np.pi / 2, 1)
-circ2.cx(2, 3)
-circ2.rx(np.pi / 2, 2)
-circ2.draw()
-
-# %%
 # MAIN CIRCUIT
 
 circ = QuantumCircuit(5, 5)
