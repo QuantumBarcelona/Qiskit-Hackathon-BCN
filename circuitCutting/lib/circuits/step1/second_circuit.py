@@ -12,6 +12,7 @@ from qiskit.quantum_info import Statevector
 
 # %%
 # SECOND PART CIRCUIT
+
 def get_circ2():
     circ2 = QuantumCircuit(3,3)
     circ2.h(range(2))
@@ -22,6 +23,3 @@ def get_circ2():
     circ2.cx(1,2)
     circ2.rx(np.pi / 2, 1)
     return circ2
-
-
-# %%
