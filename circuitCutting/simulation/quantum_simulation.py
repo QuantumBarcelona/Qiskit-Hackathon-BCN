@@ -2,7 +2,7 @@ import os
 
 import matplotlib.pyplot as plt
 import numpy as np
-from lib.measures import from_label
+from lib.measures import measure_from_label
 
 plt.rcParams.update({"font.size": 16})  # enlarge fonts
 
@@ -38,7 +38,7 @@ backend = provider.get_backend(backend_name, instance=f"{hub}/{group}/{project}"
 
 Z = Operator.from_label("Z")
 
-shots: int = 1024  # Number of shots to run each circuit for
+shots: int = 100  # Number of shots to run each circuit for
 outFolder = os.path.join(os.path.dirname(__file__), "quantum_out")
 
 
@@ -49,7 +49,7 @@ JSON["first_circuit"] = {}
 for m in ["I", "X", "Y", "Z"]:
     JSON["first_circuit"][m] = {}
     circ = get_circ1()
-    from_label(f"X{m}X")(circ)
+    measure_from_label(f"X{m}X")(circ)
 
     transpiledCirc = transpile(circ, backend)
     job = backend.run(transpiledCirc, shots=shots, job_tags=["Plan B - first", "bcn_hackathon"])
@@ -80,6 +80,9 @@ for m in ["I", "X", "Y", "Z"]:
 
 file.close()
 
+with open(os.path.join(outFolder, "quantum.json"), "w") as f:
+    json.dump(JSON, f)
+
 preQubit = 2
 file = open(os.path.join(outFolder, "second_circuit.txt"), "w")
 JSON["second_circuit"] = {}
@@ -92,7 +95,7 @@ for c in ["0", "1", "+", "-", "r", "l"]:
     circ.initialize(stateVector, circ.qubits)
     get_circ2(circ)
 
-    from_label("XXX")(circ)
+    measure_from_label("XXX")(circ)
 
     transpiledCirc = transpile(circ, backend)
     job = backend.run(transpiledCirc, shots=shots, job_tags=["Plan B - second", "bcn_hackathon"])
@@ -122,6 +125,41 @@ for c in ["0", "1", "+", "-", "r", "l"]:
     plt.savefig(os.path.join(outFolder, f"second_circuit_{c}.png"))
 
 file.close()
+
+with open(os.path.join(outFolder, "quantum.json"), "w") as f:
+    json.dump(JSON, f)
+
+# Total simulation
+JSON["main"] = {}
+circ = get_mainCirc()
+
+measure_from_label("XXXXX")(circ)
+
+transpiledCirc = transpile(circ, backend)
+job = backend.run(transpiledCirc, shots=shots, job_tags=["Plan B - total", "bcn_hackathon"])
+result = job.result()
+counts = result.get_counts(circ)
+
+JSON["main"]["counts"] = counts
+
+expectedVal = np.real(
+    sum(
+        [
+            Statevector.from_label(outcome).expectation_value(Z ^ Z ^ Z) * count / shots
+            for outcome, count in counts.items()
+        ]
+    )
+)
+
+
+JSON["main"]["expected_value"] = expectedVal
+
+plt.figure()
+plt.bar(counts.keys(), counts.values())
+plt.title(f"Initial: |{label}$\\rangle$ ($\langle X\\rangle$ = {expectedVal:.2f})")
+plt.xlabel("Measurement outcome")
+plt.ylabel("Counts")
+plt.savefig(os.path.join(outFolder, f"main_circuit.png"))
 
 with open(os.path.join(outFolder, "quantum.json"), "w") as f:
     json.dump(JSON, f)
