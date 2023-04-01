@@ -12,4 +12,4 @@ def histogram(circ, s):
     job = execute(circ, backend, shots=s)
     result = job.result()
     counts = result.get_counts(circ)
-    return plot_histogram(counts)
+    return plot_histogram(counts), counts
