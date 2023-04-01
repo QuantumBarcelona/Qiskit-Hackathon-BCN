@@ -14,11 +14,11 @@ from qiskit import QuantumCircuit, QuantumRegister
 from qiskit.quantum_info import Statevector
 
 # %%
-get_circ.draw(output="mpl")
+get_mainCirc().draw(output="mpl")
 # %%
-get_circ1.draw(output="mpl")
+get_circ1().draw(output="mpl")
 # %%
-get_circ2.draw(output="mpl")
+get_circ2().draw(output="mpl")
 
 # %%
 # Create the first circuit
