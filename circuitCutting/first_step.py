@@ -23,22 +23,8 @@ get_circ2().draw(output="mpl")
 
 # %%
 # Create the first circuit
-cricFraction1 = get_circ1()
-# Measure the cubit 1 from the first circuit
-cricFraction1.measure(1, 0)
-cricFraction1.draw(output="mpl")
-histogram(cricFraction1, 100)
+circFraction1 = get_circ1()
+print(Statevector.from_instruction(circFraction1))
 
-# %%
-cricFraction1 = get_circ1()
-Xmeasure(cricFraction1, 1, 1)
-cricFraction1.draw(output="mpl")
-
-histogram(cricFraction1, 100)
-# %%
-cricFraction1 = get_circ1()
-Ymeasure(cricFraction1, 1, 2)
-cricFraction1.draw(output="mpl")
-
-histogram(cricFraction1, 100)
-# %%
+Xmeasure(circFraction1)
+Ymeasure(circFraction1)
