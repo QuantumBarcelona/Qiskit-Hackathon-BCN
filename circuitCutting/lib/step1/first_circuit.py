@@ -28,4 +28,4 @@ circ1.rx(np.pi / 2, 0)
 circ1.x([0, 1, 2])
 circ1.measure((0, 2), (0, 2))  # Map
 circ1.measure(1, 1)  # To change for cutting
-circ1.draw(output="mpl")
+
