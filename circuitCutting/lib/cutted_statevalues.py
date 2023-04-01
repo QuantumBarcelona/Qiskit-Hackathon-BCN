@@ -8,12 +8,7 @@ from qiskit.quantum_info import Statevector
 # %%
 # SECOND CIRCUIT STATEVECTORS
 
-# Circuit:
-circ = 
-
-# Qubit cutted:
-cq = 
-
-# Creation of different cq states circuits:
+def cutted_statevalues(circ,cq):
+    # Creation of different cq states circuits:
     qnum = QuantumCircuit.num_qubits(circ)
     
