@@ -35,40 +35,43 @@ print("Expected value of I:", stateVector.expectation_value(X ^ I ^ X))
 
 # %%
 from lib.measures import from_label
+def run_class_circ1(s):
+    backend = Aer.get_backend("qasm_simulator")
+    shots = s
+    expectedValues = {
+        "I": 0,
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+    }
 
-backend = Aer.get_backend("qasm_simulator")
-shots = 1000
-expectedValues = {
-    "I": 0,
-    "X": 0,
-    "Y": 0,
-    "Z": 0,
-}
+    for m in expectedValues.keys():
+        circ = get_circ1()
+        from_label(f"X{m}X")(circ)
 
-for m in expectedValues.keys():
-    circ = get_circ1()
-    from_label(f"X{m}X")(circ)
+        job = execute(circ, backend, shots=shots)
+        result = job.result()
+        counts = result.get_counts(circ)
 
-    job = execute(circ, backend, shots=shots)
-    result = job.result()
-    counts = result.get_counts(circ)
+        if m != "I":
+            expectedValues[m] = sum(
+                [
+                    np.real(Statevector.from_label(label).expectation_value(Z ^ Z ^ Z)) * count / shots
+                    for label, count in counts.items()
+                ]
+            )
+        else:
+            expectedValues[m] = sum(counts.values()) / shots
 
-    if m != "I":
-        expectedValues[m] = sum(
-            [
-                np.real(Statevector.from_label(label).expectation_value(Z ^ Z ^ Z)) * count / shots
-                for label, count in counts.items()
-            ]
-        )
-    else:
-        expectedValues[m] = sum(counts.values()) / shots
+        plt.figure()
+        plt.bar(counts.keys(), counts.values())
+        plt.title(f"Measurement {m} ($\langle {m}\\rangle$ = {expectedValues[m]:.2f})")
+        plt.xlabel("Measurement outcome")
+        plt.ylabel("Counts")
+        plt.show()
+    
+    return expectedValues
 
-    plt.figure()
-    plt.bar(counts.keys(), counts.values())
-    plt.title(f"Measurement {m} ($\langle {m}\\rangle$ = {expectedValues[m]:.2f})")
-    plt.xlabel("Measurement outcome")
-    plt.ylabel("Counts")
-    plt.show()
-
+expectedValues = run_class_circ1(1000)
 
 # %%
