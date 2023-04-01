@@ -7,6 +7,7 @@ The Qiskit Hackathon Barcelona is an immersive competition featuring live engage
 # Table of Contents
    * [What is this?](#what-is-this)
    * [Project Structure](#project-structure)
+   * [Circuit Diagram](#circuit-diagram)
    * [Requirements](#requirements)
    * [Built With](#built-with)
    * [License](#license)
@@ -28,6 +29,8 @@ The README.md file is the file you are currently reading.
 │   ├──IBM_challenge_description.md
 ├──Resources
 │   ├──computer.jpg
+│   ├──cat.jpeg
+│   ├──circuito.jpeg
 ├──src
 │   ├──notebook.ipynb
 ├──.gitignore
@@ -35,6 +38,11 @@ The README.md file is the file you are currently reading.
 ├──LICENSE
 ├──requirements.txt
 ```
+
+# Circuit Diagram
+The circuit generated for encoding and decoding is as follows.
+
+<img src="https://github.com/migueldemollet/Qiskit-Hackathon-BCN/blob/main/Resources/circuito.jpeg" align="center" alt="circuit diagram"/>
 
 
 # Requirements
