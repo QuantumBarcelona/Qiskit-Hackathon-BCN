@@ -13,7 +13,7 @@ def cutted_statevalues(circ,cq,op):
     qnum = circ.num_qubits
     expVal = []
     for c in ["0","1","+","-","r","l","0","1"]:
-        label = "0"*(cq-1) + c + "0"*(qnum-cq)
+        label = "0"*(cq) + c + "0"*(qnum-cq-1)
         stateVector = Statevector.from_label(label)
         expVal.append(stateVector.expectation_value(op))
     return expVal
