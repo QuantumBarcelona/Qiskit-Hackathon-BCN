@@ -10,6 +10,8 @@ import sys
 
 sys.path.append("..")
 
+import json
+
 from lib.circuits.step1 import *
 
 # Import standard qiskit modules
@@ -40,9 +42,12 @@ shots: int = 1024  # Number of shots to run each circuit for
 outFolder = os.path.join(os.path.dirname(__file__), "quantum_out")
 
 
-file = open(os.path.join(outFolder, "first_circuit.txt"), "w")
+JSON = {}
 
+file = open(os.path.join(outFolder, "first_circuit.txt"), "w")
+JSON["first_circuit"] = {}
 for m in ["I", "X", "Y", "Z"]:
+    JSON["first_circuit"][m] = {}
     circ = get_circ1()
     from_label(f"X{m}X")(circ)
 
@@ -50,6 +55,8 @@ for m in ["I", "X", "Y", "Z"]:
     job = backend.run(transpiledCirc, shots=shots, job_tags=["Plan B - first", "bcn_hackathon"])
     result = job.result()
     counts = result.get_counts(circ)
+
+    JSON["first_circuit"][m]["counts"] = counts
 
     if m != "I":
         expectedVal = sum(
@@ -62,6 +69,7 @@ for m in ["I", "X", "Y", "Z"]:
         expectedVal = sum(counts.values()) / shots
 
     file.write(f"{m}\t{expectedVal}\n")
+    JSON["first_circuit"][m]["expected_value"] = expectedVal
 
     plt.figure()
     plt.bar(counts.keys(), counts.values())
@@ -74,8 +82,9 @@ file.close()
 
 preQubit = 2
 file = open(os.path.join(outFolder, "second_circuit.txt"), "w")
-
+JSON["second_circuit"] = {}
 for c in ["0", "1", "+", "-", "r", "l"]:
+    JSON["second_circuit"][c] = {}
     label = "0" * (3 - preQubit - 1) + c + "0" * (preQubit)
     stateVector = Statevector.from_label(label)
     circ = QuantumCircuit(3, 3)
@@ -90,6 +99,8 @@ for c in ["0", "1", "+", "-", "r", "l"]:
     result = job.result()
     counts = result.get_counts(circ)
 
+    JSON["second_circuit"][c]["counts"] = counts
+
     expectedVal = np.real(
         sum(
             [
@@ -99,6 +110,10 @@ for c in ["0", "1", "+", "-", "r", "l"]:
         )
     )
 
+    file.write(f"{label}\t{expectedVal}\n")
+
+    JSON["second_circuit"][c]["expected_value"] = expectedVal
+
     plt.figure()
     plt.bar(counts.keys(), counts.values())
     plt.title(f"Initial: |{label}$\\rangle$ ($\langle X\\rangle$ = {expectedVal:.2f})")
@@ -107,3 +122,6 @@ for c in ["0", "1", "+", "-", "r", "l"]:
     plt.savefig(os.path.join(outFolder, f"second_circuit_{c}.png"))
 
 file.close()
+
+with open(os.path.join(outFolder, "quantum.json"), "w") as f:
+    json.dump(JSON, f)
