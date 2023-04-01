@@ -25,4 +25,4 @@ from lib.circuits.step1 import *
 from qiskit.quantum_info.operators import Operator
 X = Operator.from_label("X")
 circ = get_circ2()
-expVal = cutted_statevalues(circ,0,X)
+expVal = cutted_statevalues(circ,0,X^X^X)
