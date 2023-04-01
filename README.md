@@ -77,6 +77,12 @@ Create a new environment with the required libraries and python version.
 
 > conda create --name name_example --file requirements.txt python=3.9
 
+Activate the environment.
+
+> conda activate name_example
+
+4. Run the with your favorite Code Editor src/notebook.ipynb
+
 # Built With
 - [VSCode](https://code.visualstudio.com/) - Code editor to program
 - [Python](https://www.python.org/) - Language used for programming.
