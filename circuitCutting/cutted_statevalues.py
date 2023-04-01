@@ -15,7 +15,9 @@ def cutted_statevalues(circ, cq, op):
     expVal = []
     for c in ["0", "1", "+", "-", "r", "l", "0", "1"]:
         label = "0" * (cq) + c + "0" * (qnum - cq - 1)
+        #print(label)
         stateVector = Statevector.from_label(label)
+        print(stateVector)
         final = stateVector.evolve(circ)
         expVal.append(final.expectation_value(op))
     return expVal
@@ -31,3 +33,5 @@ expVal = cutted_statevalues(circ,2,X^X^X)
 # %%
 
 expVal = cutted_statevalues(circ, 2, X ^ X ^ X)
+
+# %%
