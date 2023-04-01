@@ -26,7 +26,5 @@ circ.cx(3, 1)
 circ.rx(np.pi / 2, 1)
 circ.cx(2, 3)
 circ.rx(np.pi / 2, 2)
-circ.barrier(range(5))
-circ.measure((range(5)), (range(5)))
 
 # %%
