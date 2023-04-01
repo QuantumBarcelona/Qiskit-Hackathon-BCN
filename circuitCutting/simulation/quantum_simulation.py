@@ -36,10 +36,11 @@ outFolder = os.path.join(os.path.dirname(__file__), "quantum_out")
 
 
 JSON = {}
-
+print("Running first circuit...")
 file = open(os.path.join(outFolder, "first_circuit.txt"), "w")
 JSON["first_circuit"] = {}
 for m in ["I", "X", "Y", "Z"]:
+    print(f"Running measurement {m}...")
     JSON["first_circuit"][m] = {}
     circ = get_circ1()
     measure_from_label(f"X{m}X")(circ)
@@ -49,6 +50,7 @@ for m in ["I", "X", "Y", "Z"]:
     result = job.result()
     counts = result.get_counts(circ)
 
+    print("Counts: ", counts)
     JSON["first_circuit"][m]["counts"] = counts
 
     if m != "I":
@@ -61,6 +63,7 @@ for m in ["I", "X", "Y", "Z"]:
     else:
         expectedVal = sum(counts.values()) / shots
 
+    print(f"Expected value: {expectedVal:.2f}")
     file.write(f"{m}\t{expectedVal}\n")
     JSON["first_circuit"][m]["expected_value"] = expectedVal
 
@@ -70,6 +73,7 @@ for m in ["I", "X", "Y", "Z"]:
     plt.xlabel("Measurement outcome")
     plt.ylabel("Counts")
     plt.savefig(os.path.join(outFolder, f"first_circuit_{m}.png"))
+    print("Saved figure!")
 
 file.close()
 
@@ -79,9 +83,11 @@ with open(os.path.join(outFolder, "quantum.json"), "w") as f:
 preQubit = 2
 file = open(os.path.join(outFolder, "second_circuit.txt"), "w")
 JSON["second_circuit"] = {}
+print("Running second circuit...")
 for c in ["0", "1", "+", "-", "r", "l"]:
     JSON["second_circuit"][c] = {}
     label = "0" * (3 - preQubit - 1) + c + "0" * (preQubit)
+    print(f"Running circuit with label {label}...")
     stateVector = Statevector.from_label(label)
     circ = QuantumCircuit(3, 3)
     # Initialize the vector on the simulation to be the statevector
@@ -95,6 +101,7 @@ for c in ["0", "1", "+", "-", "r", "l"]:
     result = job.result()
     counts = result.get_counts(circ)
 
+    print("Counts: ", counts)
     JSON["second_circuit"][c]["counts"] = counts
 
     expectedVal = np.real(
@@ -105,6 +112,7 @@ for c in ["0", "1", "+", "-", "r", "l"]:
             ]
         )
     )
+    print(f"Expected value: {expectedVal:.2f}")
 
     file.write(f"{label}\t{expectedVal}\n")
 
@@ -116,12 +124,14 @@ for c in ["0", "1", "+", "-", "r", "l"]:
     plt.xlabel("Measurement outcome")
     plt.ylabel("Counts")
     plt.savefig(os.path.join(outFolder, f"second_circuit_{c}.png"))
+    print("Saved figure!")
 
 file.close()
 
 with open(os.path.join(outFolder, "quantum.json"), "w") as f:
     json.dump(JSON, f)
 
+print("Running total circuit...")
 # Total simulation
 JSON["main"] = {}
 circ = get_mainCirc()
@@ -133,6 +143,7 @@ job = backend.run(transpiledCirc, shots=shots, job_tags=["Plan B - total", "bcn_
 result = job.result()
 counts = result.get_counts(circ)
 
+print("Counts: ", counts)
 JSON["main"]["counts"] = counts
 
 expectedVal = np.real(
@@ -144,6 +155,7 @@ expectedVal = np.real(
     )
 )
 
+print(f"Expected value: {expectedVal:.2f}")
 
 JSON["main"]["expected_value"] = expectedVal
 
@@ -154,5 +166,9 @@ plt.xlabel("Measurement outcome")
 plt.ylabel("Counts")
 plt.savefig(os.path.join(outFolder, f"main_circuit.png"))
 
+print("Saved figure!")
+
 with open(os.path.join(outFolder, "quantum.json"), "w") as f:
     json.dump(JSON, f)
+
+print("Done!")
