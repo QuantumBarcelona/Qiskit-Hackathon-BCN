@@ -10,13 +10,17 @@ from qiskit.quantum_info import Statevector
 
 def cutted_statevalues(circ,cq):
     # Creation of different cq states circuits:
-    qnum = QuantumCircuit.num_qubits(circ)
-    label = "0"*qnum
+    qnum = circ.num_qubits
     expVal = []
-    for c in ["0","1","+","-","r","l"]:
-        label[cq] = c
+    for c in ["0","1","+","-","r","l","0","1"]:
+        label = "0"*(cq-1) + c + "0"*(qnum-cq)
         stateVector = Statevector.from_label(label)
-        expVal.append(stateVector.expectation_value())
-    print(expVal)
+        expVal.append(stateVector.expectation_value(circ))
     return expVal
+
+
+
 # %%
+from lib.circuits.step1 import *
+circ = get_circ2()
+expVal = cutted_statevalues(circ,0)
