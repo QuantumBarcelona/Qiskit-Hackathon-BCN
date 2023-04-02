@@ -30,7 +30,7 @@ In other words, the 6 people teams that will take place in this event will have 
 -Lucía Longo Balagué <br>
 -Miguel Durán Vera <br>
 -Iván Villar Naredo <br>
--Miguel Álvarez Hernane <br>
+-Miguel Álvarez Hernanez <br>
 -Manuel Porrón Álvarez <br>
 
 
