@@ -71,8 +71,8 @@ In order to take "Moodys Challenge" we should make clear a number of concepts su
 ### **Built with**
 
 
-Python: Language used for programming
-VSCode: Code editor to program
+Python: Language used for programming <br>
+VSCode: Code editor to program <br>
 
 
 ### **Important information**
