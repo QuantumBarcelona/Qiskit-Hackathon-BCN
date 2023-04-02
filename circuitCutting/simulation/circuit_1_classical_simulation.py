@@ -34,7 +34,7 @@ print("Expected value of Z:", stateVector.expectation_value(X ^ Z ^ X))
 print("Expected value of I:", stateVector.expectation_value(X ^ I ^ X))
 
 # %%
-from lib.measures import from_label
+from lib.measures import measure_from_label
 
 backend = Aer.get_backend("qasm_simulator")
 shots = 1000
@@ -47,7 +47,7 @@ expectedValues = {
 
 for m in expectedValues.keys():
     circ = get_circ1()
-    from_label(f"X{m}X")(circ)
+    measure_from_label(f"X{m}X")(circ)
 
     job = execute(circ, backend, shots=shots)
     result = job.result()
