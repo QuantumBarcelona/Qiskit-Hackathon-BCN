@@ -26,25 +26,24 @@ On the [How To Connect](How_To_Connect.ipynb) Notebook you can find some useful 
 
 ## **Teams**
 
-### **Take note of your team number, as you will need it to submit your code.**
-
-| Team Number | Challenge | Team Name | Team Members |
-| :---------: | :-------: | :-------: | :----------: |
-| **Team 1** | IBM | **Qbit Enjoyers** | Mohammad Sahrawaz, Hala Siddig Elhog, David Romero Sánchez, Daniel Saavedra Mayor, Gonzalo Garcia Navarro, Arturo Veiga Sebastián |
-| **Team 2** | IBM | **Team QuPics** | Guillerme Botelho, Boris Müllendorff, Gerard Marcet, Pau Escofet, Bart Segers, Diago Ramos |
-| **Team 3** | BSC | **QuteBits** | Hayato Ishida, Marco Paradina, Abdulelah Almimoni, Vignesh Anantharamakrishnan |
-| **Team 4** | BSC | **Q-Buddies** | Gabriel De Araujo, Oriol De Miguel, Gokarna Dumre, Ho June Kim, Jorge Plazas |
-| **Team 5** | MOODY'S | **Black-school** | Adrià Blanco, Pau Torrente, Felix Xu, Rita Li |
-| **Team 6** | IBM | **Team Mr. Worldwide** | Xiang Lin, Ireneo B. Ntutumu, Adrià Mateos, Diana Mirila, Omar Bajja |
-| **Team 7** | MOODY'S | **Team Mike Co.** | Miguel Carrasco Arango, Lucía Longo Balagué, Miguel Durán Vera, Iván Villar Naredo, Miguel Álvarez Hernane, Manuel Porrón Álvarez |
-| **Team 8** | MOODY'S | **Schrödinger Stonks** | Fran Adillón, Adrià Calm, Guillem Alvarez, Gerard Guarin, Rubén Ledesma, Arnau Fornaguera |
-| **Team 9** | ICFO | **Orangejuice** | Ana Sànchez, Derik Rochlitzen, Miquel Àngel Pérez, Pere Bancells, Thierry Nicolas Kaldenbach, Timon Scheiber |
-| **Team 10** | BSC | **ANSGAM** | Ainhoa Castaño, Sergi Bons, Nil Fernandez, Marc Subirà, Aleix Llemas, Guillermo Abad |
-| **Team 11** | ICFO | **33** | Carlos Ramon Escandell, Eric Vidal, Marc Farreras, Enrique Naranjo, Francesc Sabater, Pau Fargas |
-| **Team 12** | IBM | **Team Coyotech** | Juan Manuel Camara, Juan Carlos Martinez, Miguel del Arco, Christian Ferre, Daniel Suarez, Luis Fernando Paz |
-| **Team 13** | ICFO | **Los quanticos lokos** | Amir Azzam, Héctor Briongos, Todor Krasimirov, Teo Parella, Jordi Romero, Jan Nogué |
-| **Team 14** | ICFO | **Trotterizers** | Arnau Diebra, Sara del Pozo, Cristian Iñiguez, Misael Samir Malqui Cruz, Mohamed Ouali, Adnan Parwez |
-| **Team 15** | BSC | **Plan B** | Marc Parcerisa, Ferran R. Macaró, Jordi Torres, Berta Bori |
+| Team Number | Team Members |
+| :---------: | :----------: |
+| Team 1 | |
+| Team 2 | |
+| Team 3 | |
+| Team 4 | |
+| Team 5 | |
+| Team 6 | |
+| Team 7 | |
+| Team 8 | |
+| Team 9 | |
+| Team 10 | |
+| Team 11 | |
+| Team 12 | |
+| Team 13 | |
+| Team 14 | |
+| Team 15 | |
+| Team 16 | |
 
 ## **How to use this repository**
 
