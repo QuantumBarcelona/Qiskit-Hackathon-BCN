@@ -8,7 +8,7 @@ mapping = {
 }
 
 
-def from_label(label):
+def measure_from_label(label):
     """Returns the measurement functions that must be ran to add measurements to a circuit.
 
     Parameters
