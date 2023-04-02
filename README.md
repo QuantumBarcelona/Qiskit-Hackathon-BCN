@@ -79,6 +79,8 @@ VSCode: Code editor to program
 
 Apart from the jupyter notebook, the 3rd and last part can be accesed through the file step3.py, whilst the comprobation for the convergence of the optimizer can be found in optimizercomprobation.py
 
+In adition to the doucmentarion, there will be a set of slides, provided also in the folder results, in which we made clear our workflow through this Hackathon.
+
 
 ### **License**
 
