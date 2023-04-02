@@ -80,7 +80,7 @@ The main result are held in the Results folder. <br>
 The main code can be found in the juypter notebook named CodeSummary. This includes the introduction and the first two steps. <br>
 Apart from the jupyter notebook, the 3rd and last part can be accesed through the file step3.py, whilst the comprobation for the convergence of the optimizer can be found in optimizercomprobation.py <br>
 
-A brief summary of the code, its motivation and some bonuses can be found in Mike&CoQiskitHackathonBcn.pdf <br>
+A brief summary of the code, its motivation and some bonuses can be found in Mike_Co_Qiskit_Hackathon_Bcn.pdf <br>
 
 In adition to the documentarion, there will be a set of slides, provided also in the folder results, in which we made clear our workflow through this Hackathon. This slides can be found in the Results folder named Mike&Co.pdf
 
