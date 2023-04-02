@@ -20,6 +20,8 @@ from qiskit_ibm_provider import IBMProvider
 
 provider = IBMProvider(os.environ["IBMQ_TOKEN"])
 
+# provider.backend.jobs(backed_name)
+
 hub = "ibm-q-community"
 group = "digiq-icfo-hack"
 project = "main"
@@ -27,7 +29,6 @@ project = "main"
 backend_name = "ibmq_jakarta"  # 7 qubits
 # backend_name = "ibmq_guadalupe	" # 16 qubits
 
-backend = provider.get_backend(backend_name, instance=f"{hub}/{group}/{project}")
 
 Z = Operator.from_label("Z")
 
@@ -39,6 +40,7 @@ jobs = {}
 
 
 def run_simulation(circuit):
+    backend = provider.get_backend(backend_name, instance=f"{hub}/{group}/{project}")
     transpiledCirc = transpile(circuit, backend)
     job = backend.run(transpiledCirc, shots=shots, job_tags=["Plan B", "bcn_hackathon"])
     result = job.result()
