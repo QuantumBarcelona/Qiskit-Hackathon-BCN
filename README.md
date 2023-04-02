@@ -13,7 +13,6 @@ In other words, the 6 people teams that will take place in this event will have 
 
 ### **Team** **members:**   
 
-![University of Oviedo](https://github.com/isivoxx/Qiskit-Hackathon-BCN/blob/main/Resources/UO.png|width=100)
 
 -Miguel Carrasco Arango
 -Lucía Longo Balagué
@@ -46,7 +45,7 @@ In order to take "Moodys Challenge" we should make clear a number of concepts su
 
 ### **Circuit Diagram**
 
-![Circuit Diagram](https://github.com/isivoxx/Qiskit-Hackathon-BCN/blob/main/Resources/circ.png|width=100)
+![Circuit Diagram](https://github.com/isivoxx/Qiskit-Hackathon-BCN/blob/main/Resources/circ.png)
 
 ### **Requirements**
 
