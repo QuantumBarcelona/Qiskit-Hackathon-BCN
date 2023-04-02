@@ -85,11 +85,11 @@ In adition to the doucmentarion, there will be a set of slides, provided also in
 ### **License**
 
 This project is under the MIT License
-[](https://opensource.org/license/mit/)
+[MIT](https://opensource.org/license/mit/)
 
 
 ### **Suppport**
 Escola d'Enginyeria - UAB
-[](https://www.uab.cat/enginyeria/)
+[UAB](https://www.uab.cat/enginyeria/) <br>
 IBM Quantum
-[](https://quantum-computing.ibm.com/composer/files/f130b532a43fcbfc655fa49d0c9e82f19243be194211259ae675510796094d1f)
+[IBM](https://quantum-computing.ibm.com/composer/files/f130b532a43fcbfc655fa49d0c9e82f19243be194211259ae675510796094d1f) <br>
