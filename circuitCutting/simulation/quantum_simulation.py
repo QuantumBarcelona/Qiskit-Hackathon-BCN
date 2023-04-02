@@ -17,7 +17,7 @@ from qiskit.quantum_info import Statevector
 from qiskit.quantum_info.operators import Operator
 from qiskit_ibm_provider import IBMProvider
 
-provider = IBMProvider()
+provider = IBMProvider(os.environ["IBMQ_TOKEN"])
 
 hub = "ibm-q-community"
 group = "digiq-icfo-hack"
