@@ -28,12 +28,16 @@ The README.md file is the file you are currently reading.
 ```
 ├──challenges
 │   ├──IBM_challenge_description.md
-├──Resources
+├──dataset
+│   ├──black.png
+│   ├──checkerboard.png
+│   ├──...
+├──resources
 │   ├──computer.jpg
 │   ├──cat.jpeg
 │   ├──circuito.jpeg
 ├──src
-│   ├──notebook.ipynb
+│   ├──qiskit.ipynb
 ├──.gitignore
 ├──README.md
 ├──LICENSE
@@ -54,6 +58,7 @@ For running each sample code:
 - [Qiskit 0.42](https://qiskit.org/)
 - [Numpy](https://numpy.org/)
 - [Matplotlib](https://matplotlib.org/)
+- [Opencv-Python](https://opencv.org/)
 
 # How to use
 
@@ -81,7 +86,7 @@ Activate the environment.
 
 > conda activate name_example
 
-4. Run the with your favorite Code Editor src/notebook.ipynb
+4. Run the with your favorite Code Editor src/qiskit.ipynb
 
 # Built With
 - [VSCode](https://code.visualstudio.com/) - Code editor to program
