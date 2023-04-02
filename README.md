@@ -25,6 +25,8 @@ In other words, the 6 people teams that will take place in this event will have 
 ### **Who** **are** **we?**
 
 
+
+
 We are a group of 6 students studying the Double Degree Program in Physics and Mathematics in the University of Oviedo. Next we will give a brief overview of what we are  going to work in during the next 24 hours and why.
 
 Quantum computing is a rapidly growing field that has the potential to revolutionize the way we process information. It has lots of benefits and new constant challenges. And it is been more and more considered as a powerful tool that will definitely transform the world we live in.
@@ -59,6 +61,11 @@ In order to take "Moodys Challenge" we should make clear a number of concepts su
 
 Python: Language used for programming
 VSCode: Code editor to program
+
+
+### **Important information**
+
+Apart from the jupyter notebook, the 3rd and last part can be accesed through the file step3.py, whilst the comprobation for the convergence of the optimizer can be found in optimizercomprobation.py
 
 
 ### **License**
