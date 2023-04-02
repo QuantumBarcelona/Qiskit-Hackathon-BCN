@@ -25,8 +25,8 @@ def get_circ1(initialCircuit=None):
     else:
         circ1 = initialCircuit
     circ1.h([0, 1, 2])  # Hadamard gate
-    circ1.cx(0, 2)  # Ctrl C gate (target, where applies gate)
-    circ1.rx(np.pi / 2, 2)  # Rx gate
-    circ1.cx(0, 1)
+    circ1.cx(0, 1)  # Ctrl C gate (target, where applies gate)
+    circ1.rx(np.pi / 2, 1)  # Rx gate
+    circ1.cx(0, 2)
     circ1.rx(np.pi / 2, 0)
     return circ1
