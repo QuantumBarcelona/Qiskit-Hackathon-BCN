@@ -7,7 +7,7 @@ plt.rcParams.update({"font.size": 16})  # enlarge fonts
 
 import sys
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 import json
 
 from lib.circuits.step1 import *
