@@ -11,7 +11,7 @@ sys.path.append("..")
 from lib.circuits.step1 import *
 
 # %%
-from lib.measures import from_label
+from lib.measures import measure_from_label
 
 # Import standard qiskit modules
 from qiskit import Aer, QuantumCircuit, QuantumRegister, execute
@@ -39,7 +39,7 @@ def run_class_circ2(s,circ_func,makeGraph=True):
         circ.initialize(stateVector, circ.qubits)
         circ_func(circ)
 
-        from_label("XXX")(circ)
+    measure_from_label("XXX")(circ)
 
         job = execute(circ, backend, shots=shots)
         result = job.result()

@@ -23,6 +23,7 @@ from qiskit.quantum_info.operators import Operator
 # %%
 
 # %%
+
 from lib.measures import from_label
 def run_class_circ1(s,circ_func,makeGraph=True):
     # Matrix operators
@@ -77,5 +78,6 @@ def run_class_circ1(s,circ_func,makeGraph=True):
     return expectedValues
 
 expectedValues = run_class_circ1(1000,get_circ1,True)
+
 
 # %%
