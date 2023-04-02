@@ -2,15 +2,15 @@
 
 ### **Index**
 
-1. What is the Qiskit Hackathon Barcelona about?
-2.Team members
-3.Who are we?
-4.MOODYS CHALLENGE
-5.Circuit Diagram
-6.Requirements
-7.Built with
-8.License
-9.Support
+1. What is the Qiskit Hackathon Barcelona about? <br>
+2.Team members <br>
+3.Who are we? <br>
+4.MOODYS CHALLENGE <br>
+5.Circuit Diagram <br>
+6.Requirements <br>
+7.Built with <br>
+8.License <br>
+9.Support <br>
 
 
 ### **What** **is** **The** **Qiskit** **Hackathon** **Barcelona** **about?**
