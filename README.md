@@ -75,8 +75,9 @@ Python: Language used for programming <br>
 VSCode: Code editor to program <br>
 
 
-### **Important information**
-
+### **Filing organization roadmap**
+The main result are held in the Results folder. <br>
+The main code can be found in the juypter notebook named CodeSummary. This includes the introduction and the first two steps. <br>
 Apart from the jupyter notebook, the 3rd and last part can be accesed through the file step3.py, whilst the comprobation for the convergence of the optimizer can be found in optimizercomprobation.py
 
 In adition to the doucmentarion, there will be a set of slides, provided also in the folder results, in which we made clear our workflow through this Hackathon.
