@@ -22,8 +22,11 @@ We encode all $N^2 = 2^{2n}$ brightness values in the $N^2$ coefficient of a $2n
 This can be done throught the following steps:
 
 1. The following normalization factor is defined:
+
 $$F = \sqrt{\sum_{i=0}^{N^2-1}I_{i}}$$
+
 2. The amplitude vector is defined by taking the square root of the intensities vector:
+
 $$
 A = \begin{pmatrix}
 
