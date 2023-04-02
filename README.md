@@ -26,12 +26,12 @@ In other words, the 6 people teams that will take place in this event will have 
 ### **Team** **members:**   
 
 
--Miguel Carrasco Arango
--Lucía Longo Balagué
--Miguel Durán Vera
--Iván Villar Naredo
--Miguel Álvarez Hernane
--Manuel Porrón Álvarez
+-Miguel Carrasco Arango <br>
+-Lucía Longo Balagué <br>
+-Miguel Durán Vera <br>
+-Iván Villar Naredo <br>
+-Miguel Álvarez Hernane <br>
+-Manuel Porrón Álvarez <br>
 
 
 ### **Who** **are** **we?**
