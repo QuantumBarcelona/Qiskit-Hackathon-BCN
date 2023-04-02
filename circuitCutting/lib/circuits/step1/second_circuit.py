@@ -20,11 +20,11 @@ def get_circ2(initialCircuit=None):
         circ2 = QuantumCircuit(3, 3)
     else:
         circ2 = initialCircuit
-    circ2.h(range(2))
-    circ2.rx(np.pi / 2, 0)
-    circ2.rx(np.pi / 5, 2)
-    circ2.cx(2, 0)
-    circ2.rx(np.pi / 2, 0)
-    circ2.cx(1, 2)
+    circ2.h([1, 2])
     circ2.rx(np.pi / 2, 1)
+    circ2.rx(np.pi / 5, 0)
+    circ2.cx(0, 1)
+    circ2.rx(np.pi / 2, 1)
+    circ2.cx(2, 0)
+    circ2.rx(np.pi / 2, 2)
     return circ2
