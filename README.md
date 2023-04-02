@@ -96,13 +96,16 @@ $$
 A full proof can be found [here](https://www.notion.so/guilhermebaos/Circuit-Visualization-980b8b87e0ae4d7098b9c2fdc577c46b?pvs=4#cc735b8648a54c78bb5c7f5b130669bc).
 ### Finding out the Original Image
 We can calculate the image we are encoding by calculating what image should ideally be recovered as explained above:
+
 $$
 \begin{align*}
 I_i = \frac{P(i)}{P(max)}I_{max}
 \end{align*}
 $$
+
 Therefore for any parameters $\varphi_i$ we can compute what the image should be by following these steps, and compare that theoretical image with the quantum computer’s output:
 1. We can write out each qubit’s state as follows:
+
 $$
 \begin{align*}
 R_X\ket{q_i} &= \cos\frac{\theta_i}2\ket 0 -i\sin\frac{\theta_i}2\ket1 =
@@ -110,6 +113,7 @@ R_X\ket{q_i} &= \cos\frac{\theta_i}2\ket 0 -i\sin\frac{\theta_i}2\ket1 =
 &= \alpha_{i0}\ket 0 + \alpha_{i1}\ket1
 \end{align*}
 $$
+
 - Where:
   - $q_i$ is the $i$-th qubit, which starts in the state $\ket 0$
   - $\theta_i = \varphi_i - \pi$ is the $i$-th angle of rotation
