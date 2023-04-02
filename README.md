@@ -10,14 +10,14 @@ Project developed during the Qiskit Hackathon BCN 2023. Memebrs of the team:
 
 In this document we will present and discuss the different methods we have implemented. Each section will refer to a particular Python Notebook.
 
-We have also condensed all the versions of the algorithm in a library-like file [QIE.py](QIE.py), so it can be easily import and use into other files, like we are doing in the [Getting Started Notebook](QIE_Getting_Started.ipynb)
+We have also condensed all the versions of the algorithm in a library-like file [QIE.py](QIE.py), so it can be easily imported and useed into other files, like we have done in the [Getting Started Notebook](QIE_Getting_Started.ipynb)
 
-We firstly defined an evaluation metric called **Reconstruction Sqared Error**. That computes the sum of the squared difference pixel by pixel of the image. This gives us a nice, objective metric to evaluate the performance of our algorithms.
+We firstly defined an evaluation metric called **Reconstruction Sqared Error**. That computes the sum of the squared difference in brightness pixel by pixel of the image. This gives us a nice, objective metric to evaluate the performance of our algorithms.
 
 ## Version 1
 [Python Notebook](QIE-Version_1-6_Qubits.ipynb)
 
-We encode all $N^2 = 2^{2n}$ brightness values in the $N^2$ coefficient of a $2n$ qubit statevector. Meaning the pixel intensity is encoded in the probability ampliude of the qubits.
+We encode all $N^2 = 2^{2n}$ brightness values in the $N^2$ coefficients of a $2n$ qubit statevector. Meaning the pixel intensity is encoded in the probability ampliude of the qubits.
 
 This can be done throught the following steps:
 
@@ -36,9 +36,9 @@ Here pixel intensity is therefore proportional to the probability of measuring t
 $$I_{max} = \max\{I_i\}$$
 
 
-To then reconstruct the image, we store the counts associated with each state as a vector and get the highest count state, which corresponds to the brightest pixel. We then reconstruct the brightness of the pixels through the following expression, using the previously stored max intensity
+To then reconstruct the image, we store the counts associated with each state as a vector and get the highest count state, which corresponds to the brightest pixel. We then reconstruct the brightness of the pixels through the following expression, using the previously stored max intensity:
 
-$R_i = \frac{C_i}{C_{max}}I_{max}$
+$$R_i = \frac{C_i}{C_{max}}I_{max}$$
 
 To implement this protocol, the states are initialized and transpiled using the backend native gates through the corresponding qiskit functions.
 
@@ -165,3 +165,10 @@ On the other hand, when encoding and decoding an image generate using the Best-D
 
 ![Experiment 2](BestDepth-0.4.png)
 
+Last but not least, we ran three experiments in real hardware with pixels only black and white, obtaining an almost perfect reconstruction as we can see below:
+
+![Experiment 3](IBM-I.png)
+![Experiment 4](IBM-B.png)
+![Experiment 5](IBM-M.png)
+
+##  Thanks for reading this far! We hope you enjoyed our work!
