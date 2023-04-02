@@ -41,22 +41,36 @@ full_circuit_error = np.ndarray(len(N),dtype=float)
 split_circuit_error = np.ndarray(len(N),dtype=float)
 
 full_circuit_error = [expX_class_full(n) for n in N]
-split_circuit_error = [expX_class_split(n,get_circ1(),get_circ2()) for n in N]
-split_circuit_error_var = [expX_class_split(n,get_circ1_var(),get_circ2_var()) for n in N]
+split_circuit_error = [expX_class_split(n,get_circ1,get_circ2) for n in N]
+split_circuit_error_var = [expX_class_split(n,get_circ1_var,get_circ2_var) for n in N]
 
 print(full_circuit_error)
 # print(split_circuit_error)
 #%%
-fig, ax = plt.subplots()
-ax.plot(N,full_circuit_error,label="full circuit")
-ax.plot(N,split_circuit_error, label="split circuit")
 
-ax.legend(loc=9)
-ax.set_xlabel("Number of simulations")
-ax.set_ylabel("Error")
-ax.set_title("Error v number simulations")
 
-ax.set_yscale('log')
+fig, ax = plt.subplots(1,2,figsize=(15,15))
+fig
+ax[0].plot(N,full_circuit_error,label="full circuit")
+ax[0].plot(N,split_circuit_error, label="split circuit")
+
+ax[1].plot(N,full_circuit_error,label="full circuit")
+ax[1].plot(N,split_circuit_error_var, label="split circuit var")
+
+
+ax[0].legend(loc=9)
+ax[0].set_xlabel("Number of simulations")
+ax[0].set_ylabel("Error")
+ax[0].set_title("Error v number simulations")
+
+ax[0].set_yscale('log')
+
+ax[1].legend(loc=9)
+ax[1].set_xlabel("Number of simulations")
+ax[1].set_ylabel("Error")
+ax[1].set_title("Error v number simulations")
+
+ax[1].set_yscale('log')
 
 plt.show()
 

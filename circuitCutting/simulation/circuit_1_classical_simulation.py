@@ -18,24 +18,28 @@ from qiskit.quantum_info import Statevector
 from qiskit.quantum_info.operators import Operator
 
 #  %%
-# Matrix operators
-X = Operator.from_label("X")
-Y = Operator.from_label("Y")
-Z = Operator.from_label("Z")
-I = Operator.from_label("I")
+
 
 # %%
-# This initializes the statevector at the |0> state (all zeros), and then evolves it under the circuit
-stateVector = Statevector.from_instruction(get_circ1())
-
-print("Expected value of X:", stateVector.expectation_value(X ^ X ^ X))
-print("Expected value of Y:", stateVector.expectation_value(X ^ Y ^ X))
-print("Expected value of Z:", stateVector.expectation_value(X ^ Z ^ X))
-print("Expected value of I:", stateVector.expectation_value(X ^ I ^ X))
 
 # %%
 from lib.measures import from_label
 def run_class_circ1(s,circ_func,makeGraph=True):
+    # Matrix operators
+    X = Operator.from_label("X")
+    Y = Operator.from_label("Y")
+    Z = Operator.from_label("Z")
+    I = Operator.from_label("I")
+
+    # This initializes the statevector at the |0> state (all zeros), and then evolves it under the circuit
+    stateVector = Statevector.from_instruction(circ_func())
+
+    print("Expected value of X:", stateVector.expectation_value(X ^ X ^ X))
+    print("Expected value of Y:", stateVector.expectation_value(X ^ Y ^ X))
+    print("Expected value of Z:", stateVector.expectation_value(X ^ Z ^ X))
+    print("Expected value of I:", stateVector.expectation_value(X ^ I ^ X))
+
+
     backend = Aer.get_backend("qasm_simulator")
     shots = s
     expectedValues = {
@@ -46,7 +50,7 @@ def run_class_circ1(s,circ_func,makeGraph=True):
     }
 
     for m in expectedValues.keys():
-        circ = circ_func
+        circ = circ_func()
         from_label(f"X{m}X")(circ)
 
         job = execute(circ, backend, shots=shots)
@@ -72,6 +76,6 @@ def run_class_circ1(s,circ_func,makeGraph=True):
 
     return expectedValues
 
-expectedValues = run_class_circ1(1000,True)
+expectedValues = run_class_circ1(1000,get_circ1,True)
 
 # %%

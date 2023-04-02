@@ -62,6 +62,6 @@ def run_class_circ2(s,circ_func,makeGraph=True):
             plt.show()
     return expectedValues
 
-expectedValues = run_class_circ2(1000)
+expectedValues = run_class_circ2(1000,get_circ2,True)
 
 # %%
