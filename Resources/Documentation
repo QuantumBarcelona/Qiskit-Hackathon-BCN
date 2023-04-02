@@ -1,0 +1,16 @@
+The purpose of this document is to present the reader with the links used to get information about the modules used.
+
+The modules used are listed below:
+- Matplotlib.pyplot <br>
+- Numpy <br>
+- Scipy.sparse <br>
+- Qiskit.quantum_info <br>
+- Qiskit.algorithms.optimizers <br>
+- Qiskit.algorithms. <br>
+- Qiskit.algorithms.time_evolvers.variational <br>
+
+Whilst the links used to access them are listed below:
+- Qiskit: https://qiskit.org/documentation/index.html <br>
+- Scipy: https://docs.scipy.org/doc/scipy/ <br>
+- Matplotlib: https://matplotlib.org/stable/index.html <br>
+- Numpy: https://numpy.org/doc/ <br>
