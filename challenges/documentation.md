@@ -84,9 +84,9 @@ The approach to this problem will be to solve first the 2.2 and then particulari
 
 ## 2.2 - Spectrum as function of the bond length
 For the general problem we used the ``HartreeFock`` ``ansatz`` and began with a $|0\rangle^{\otimes N}$ state. Then we used a VQE with the ``COBYLA`` optimizer to calculate the *GS* and a VQD to calculate the excited states (2 excited)
-
+![image](gsand2excited.jpeg)
 ## 2.3 - Imperfect devices
-If we want to simulate a more real system, we implemented a general noise.
+If we want to simulate a more real system, we implemented a general noise. We refer to the code in order to see how it's been done and the energies obtained.
 
 ## 3. Mastering quantum simulation shenanigans
 From here, we implemented what we had time: We uploaded the VQE into the quantum machine. From here, we should have gotten the topology of the qubit with a fake backend and try to implement what we had without the simulators (or the numerical solvers).
