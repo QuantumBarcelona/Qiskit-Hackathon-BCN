@@ -88,11 +88,13 @@ To encode We want to encode an image that is described by a product state and as
 ### Change to the Native Gates
 We can then change this into a sequence of native gates $S_X$ and $R_Z$ for our quantum computer..
 If the starting state is $\ket{00\cdots0}$ we have that:
+
 $$
 \begin{align*}
 S_X R_Z(\varphi)S_X\ket{00\cdots0} = R_X(\varphi - \pi)\ket{00\cdots0}
 \end{align*}
 $$
+
 A full proof can be found [here](https://www.notion.so/guilhermebaos/Circuit-Visualization-980b8b87e0ae4d7098b9c2fdc577c46b?pvs=4#cc735b8648a54c78bb5c7f5b130669bc).
 ### Finding out the Original Image
 We can calculate the image we are encoding by calculating what image should ideally be recovered as explained above:
