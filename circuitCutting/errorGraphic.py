@@ -45,10 +45,12 @@ split_circuit_error = [expX_class_split(n) for n in N]
 
 print(full_circuit_error)
 # print(split_circuit_error)
-
+#%%
 fig, ax = plt.subplots()
-ax.plot(N,full_circuit_error)
-ax.plot(N,split_circuit_error)
+ax.plot(N,full_circuit_error,label="full circuit")
+ax.plot(N,split_circuit_error, label="split circuit")
+
+ax.legend()
 
 ax.set_yscale('log')
 
