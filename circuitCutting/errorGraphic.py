@@ -29,9 +29,9 @@ def expX_class_full(n): # n = number of shots
     return expected_X
 
 # Classic simulation for split circuit
-def expX_class_split(n):
-    expect1 = run_class_circ1(n,makeGraph=False)
-    expect2 = run_class_circ2(n,makeGraph=False)
+def expX_class_split(n,circ_func1,circ_func2):
+    expect1 = run_class_circ1(n,circ_func1,makeGraph=False)
+    expect2 = run_class_circ2(n,circ_func2,makeGraph=False)
     expectation = recompose(expect1,expect2)
     expected_X = np.abs(1.0-expectation)
     return expected_X
@@ -41,7 +41,8 @@ full_circuit_error = np.ndarray(len(N),dtype=float)
 split_circuit_error = np.ndarray(len(N),dtype=float)
 
 full_circuit_error = [expX_class_full(n) for n in N]
-split_circuit_error = [expX_class_split(n) for n in N]
+split_circuit_error = [expX_class_split(n,get_circ1(),get_circ2()) for n in N]
+split_circuit_error_var = [expX_class_split(n,get_circ1_var(),get_circ2_var()) for n in N]
 
 print(full_circuit_error)
 # print(split_circuit_error)
@@ -50,7 +51,10 @@ fig, ax = plt.subplots()
 ax.plot(N,full_circuit_error,label="full circuit")
 ax.plot(N,split_circuit_error, label="split circuit")
 
-ax.legend()
+ax.legend(loc=9)
+ax.set_xlabel("Number of simulations")
+ax.set_ylabel("Error")
+ax.set_title("Error v number simulations")
 
 ax.set_yscale('log')
 

@@ -21,7 +21,7 @@ from qiskit.quantum_info import Statevector
 from qiskit.quantum_info.operators import Operator
 
 # %%
-def run_class_circ2(s,makeGraph=True):
+def run_class_circ2(s,circ_func,makeGraph=True):
     Z = Operator.from_label("Z")
 
 
@@ -37,7 +37,7 @@ def run_class_circ2(s,makeGraph=True):
         circ = QuantumCircuit(3, 3)
         # Initialize the vector on the simulation to be the statevector
         circ.initialize(stateVector, circ.qubits)
-        get_circ2(circ)
+        circ_func(circ)
 
         from_label("XXX")(circ)
 

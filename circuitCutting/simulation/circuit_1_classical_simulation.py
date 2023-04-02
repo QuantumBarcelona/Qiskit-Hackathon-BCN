@@ -35,7 +35,7 @@ print("Expected value of I:", stateVector.expectation_value(X ^ I ^ X))
 
 # %%
 from lib.measures import from_label
-def run_class_circ1(s,makeGraph=True):
+def run_class_circ1(s,circ_func,makeGraph=True):
     backend = Aer.get_backend("qasm_simulator")
     shots = s
     expectedValues = {
@@ -46,7 +46,7 @@ def run_class_circ1(s,makeGraph=True):
     }
 
     for m in expectedValues.keys():
-        circ = get_circ1()
+        circ = circ_func
         from_label(f"X{m}X")(circ)
 
         job = execute(circ, backend, shots=shots)
