@@ -27,7 +27,7 @@ $$F = \sqrt{\sum_{i=0}^{N^2-1}I_{i}}$$
 
 2. The amplitude vector is defined by taking the square root of the intensities vector:
 
-$$A = \begin{pmatrix}\sqrt{I_{0}}\\\sqrt{I_{1}}\\\vdots\\\sqrt{I_{N^2-1}}\end{pmatrix}$$
+$$A = \begin{pmatrix} \sqrt{I_{0}}\\ \sqrt{I_{1}}\\ \vdots\\ \sqrt{I_{N^2-1}} \end{pmatrix}$$
 
 3. The state vector is then written as:
 $$\ket \psi = A/F$$
