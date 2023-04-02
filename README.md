@@ -142,7 +142,7 @@ For the executions in real Hardware we have used version 3 of the algorithm, as 
 Here is the reconstruction:
 ![Experiment 1](Version3-2.13.png)
 
-While running the program on real hardware, the quality of the decompressed image descreases greatly compared to the simulations, as expected.
+While running the program on real hardware, the quality of the decompressed image descreases greatly compared to the simulations, as expected (reconstruction error = 2.13).
 
 In order to to minimize the squared error, a resilience_level = 1 and optimization_level = 3 was used yielding better results.
 
@@ -153,3 +153,6 @@ We also noticed that some columns give significantly less accurate results, whic
 - States with more "1"s are more prone to losing information due to decoherence
 
 Columns with less accurate results indeed corresponded to the qubits with the lesser coherence times, confirming our intuition.
+
+On the other hand, when encoding and decoding an image generate using the Best-Depth method, the algorithm perform much better, obtaining a reconstruction error of 0.4!
+![Experiment 2](BestDepth-0.4.png)
