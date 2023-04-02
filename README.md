@@ -63,9 +63,9 @@ In order to take "Moodys Challenge" we should make clear a number of concepts su
 
 ### **Requirements**
 
-[Python](https://aprendeconalf.es/docencia/python/manual/)
-[Numpy](https://numpy.org/doc/)
-[Matplotlib](https://matplotlib.org)
+[Python](https://aprendeconalf.es/docencia/python/manual/) <br>
+[Numpy](https://numpy.org/doc/) <br>
+[Matplotlib](https://matplotlib.org) <br>
 
 
 ### **Built with**
