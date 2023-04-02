@@ -1,61 +1,75 @@
-# **Welcome to Qiskit Hackathon BCN 2023**
+### **Qiskit** **Hackathon** **BCN** **2023**
 
-## 📄  [Click here to access the In-Person Attendee Guide](https://docs.google.com/presentation/d/1nfg607ooJaA4KhBDBFBsJHK_Io-5Qm-0)
 
-## **About**
+### **What** **is** **The** **Qiskit** **Hackathon** **Barcelona** **about?**
 
-The Qiskit Hackathon Barcelona is an immersive competition featuring live engagement, teamwork, and mentorship by expert researchers, developers and advocates.
+First and foremost, it must be mentioned that The Qiskit Hackathon Barcelona is a 24 hour quantum computing competition featuring live engagement and teamwork by experts from different technological companies. It will take place from 1st and 2nd April in Escola d'Enginyeria UAB.
 
-This event is being organized with the colaboration of: Institute of Photonic Sciences (ICFO), IBM Quantum, Barcelona Supercomputing Center (BSC), Moody's, Qiskit Community, Quantum Barcelona, Institut de Física d'Altes Energies (IFAE), and hosted by Universitat Autònoma de Barcelona (UAB).
+In this event, those companies will propose us a number of challenges, from which we will have to choose one of them and where our principal concern will be to think about the most effective and fastest solution. 
 
-The Qiskit Hackathon will take place from 1st to 2nd April in Escola d'Enginyeria UAB (Barcelona), Spain.
+It has being organized with the collaboration of: Institute of Photonic Sciences (ICFO), IBM Quantum, Barcelona Supercomputing Center (BSC), Moody's, Qiskit Community, Quantum Barcelona, Institut de Física d'Altes Energies (IFAE), and hosted by Universitat Autònoma de Barcelona (UAB).
 
-Participants will have 24 hours to work in teams to develop solutions to problems in the field of quantum computing and present it to a panel of judges.
+In other words, the 6 people teams that will take place in this event will have a 24 hour time in order to present their project in front of a jury who will deliberate the winner team.
 
-Even though the hackathon will be done in teams of 6 people, there will be a team activity at the begining of the event.
-So don't be afraid to come alone or without a complete team. Let's meet each other!
+### **Team** **members:**   
 
-## **Challenges**
+![University of Oviedo](file:///Users/lucia/Desktop/Captura%20de%20pantalla%202023-04-02%20a%20las%208.17.09.png)
 
-Challenges will be proposed by some of the top experts from IBM Quantum, ICFO, Moody’s and the Barcelona Supercomputing Center.
-You don't need to have experience in quantum computing, but some basic programming knowledge is recommended.
+-Miguel Carrasco Arango
+-Lucía Longo Balagué
+-Miguel Durán Vera
+-Iván Villar Naredo
+-Miguel Álvarez Hernane
+-Manuel Porrón Álvarez
 
-Challenges can be found in the [Challenges](challenges/) folder of this repository.
 
-On the [How To Connect](How_To_Connect.ipynb) Notebook you can find some useful information about how to connect to the IBM platform for the hackathon.
+### **Who** **are** **we?**
 
-## **Teams**
 
-### **Take note of your team number, as you will need it to submit your code.**
+We are a group of 6 students studying the Double Degree Program in Physics and Mathematics in the University of Oviedo. Next we will give a brief overview of what we are  going to work in during the next 24 hours and why.
 
-| Team Number | Challenge | Team Name | Team Members |
-| :---------: | :-------: | :-------: | :----------: |
-| **Team 1** | IBM | **Qbit Enjoyers** | Mohammad Sahrawaz, Hala Siddig Elhog, David Romero Sánchez, Daniel Saavedra Mayor, Gonzalo Garcia Navarro, Arturo Veiga Sebastián |
-| **Team 2** | IBM | **Team QuPics** | Guillerme Botelho, Boris Müllendorff, Gerard Marcet, Pau Escofet, Bart Segers, Diago Ramos |
-| **Team 3** | BSC | **QuteBits** | Hayato Ishida, Marco Paradina, Abdulelah Almimoni, Vignesh Anantharamakrishnan |
-| **Team 4** | BSC | **Q-Buddies** | Gabriel De Araujo, Oriol De Miguel, Gokarna Dumre, Ho June Kim, Jorge Plazas |
-| **Team 5** | MOODY'S | **Black-school** | Adrià Blanco, Pau Torrente, Felix Xu, Rita Li |
-| **Team 6** | IBM | **Team Mr. Worldwide** | Xiang Lin, Ireneo B. Ntutumu, Adrià Mateos, Diana Mirila, Omar Bajja |
-| **Team 7** | MOODY'S | **Team Mike Co.** | Miguel Carrasco Arango, Lucía Longo Balagué, Miguel Durán Vera, Iván Villar Naredo, Miguel Álvarez Hernane, Manuel Porrón Álvarez |
-| **Team 8** | MOODY'S | **Schrödinger Stonks** | Fran Adillón, Adrià Calm, Guillem Alvarez, Gerard Guarin, Rubén Ledesma, Arnau Fornaguera |
-| **Team 9** | ICFO | **Orangejuice** | Ana Sànchez, Derik Rochlitzen, Miquel Àngel Pérez, Pere Bancells, Thierry Nicolas Kaldenbach, Timon Scheiber |
-| **Team 10** | BSC | **ANSGAM** | Ainhoa Castaño, Sergi Bons, Nil Fernandez, Marc Subirà, Aleix Llemas, Guillermo Abad |
-| **Team 11** | ICFO | **33** | Carlos Ramon Escandell, Eric Vidal, Marc Farreras, Enrique Naranjo, Francesc Sabater, Pau Fargas |
-| **Team 12** | IBM | **Team Coyotech** | Juan Manuel Camara, Juan Carlos Martinez, Miguel del Arco, Christian Ferre, Daniel Suarez, Luis Fernando Paz |
-| **Team 13** | ICFO | **Los quanticos lokos** | Amir Azzam, Héctor Briongos, Todor Krasimirov, Teo Parella, Jordi Romero, Jan Nogué |
-| **Team 14** | ICFO | **Trotterizers** | Arnau Diebra, Sara del Pozo, Cristian Iñiguez, Misael Samir Malqui Cruz, Mohamed Ouali, Adnan Parwez |
-| **Team 15** | BSC | **Plan B** | Marc Parcerisa, Ferran R. Macaró, Jordi Torres, Berta Bori |
+Quantum computing is a rapidly growing field that has the potential to revolutionize the way we process information. It has lots of benefits and new constant challenges. And it is been more and more considered as a powerful tool that will definitely transform the world we live in.
 
-## **How to use this repository**
+Among the four challenges we were offered. Our final decision has been "Moodys challenge". The main reason why we have chosen this exact challenge has been due to our great interest in quantum computing mixed with the financial modeling, optimization, risk management and fraud detection.
 
-This repository contains the code you need to participate in the Hackathon. However, it is not meant to be used as a working environment. You should use your own environment to develop your code.
+To sum up, we were looking for a challenge where we could find the more theoretical physical part and different financial models joined together. Futhermore we belief in the great potential and impact quantum computing will have in our society and in the financial industry.
 
-One of your team members should **fork** this repository and add the rest of the team as collaborators. This way, you will be able to work on the same code.
 
-When the final code submission is ready, you should create a pull request to this repository, targeting the branch allocated for your team. This way, the judges will be able to review your code.
-We expect you to submit your code **ONLY** at the end of the hackathon, and only once with a single pull request (although you can make as many commits as you want).
 
-## Questions
+### **MOODYS CHALLENGE**
 
-If you have any questions, please ask the team of Qiskit Mentors at the event or post them in the dedicated Qiskit Event
-Slack Channel [#bcn-hackathon-2023](https://qiskit.slack.com/archives/C04UARD1LDC) [[Click here to join Qiskit Slack](https://ibm.co/joinqiskitslack), if needed].
+Historically, the creation of derivatives in the late 1970s led to the development of mathematical models to determine their value and reduce the risk of losses. These models have become increasingly sophisticated and require advanced computing power. The use of quantum computing methods can speed up the process of solving option pricing, which is of interest to the industry.
+
+In this challenge, the goal is to create and operate quantum circuits that can simulate the price evolution of an option under certain dynamics (Black Scholes equation) to determine its value. This challenge is suitable for NISQ devices and small-scale quantum simulators, and there is flexibility in how the problem dimension can be represented.
+
+In order to take "Moodys Challenge" we should make clear a number of concepts such as Partial Differential equation and quantum algorithms, The Black Scholes model, Variational quantum imaginary time evolution, The Black-Scholes Hamiltonian for an European call option and its model parameters and basic imports.
+
+### **Circuit Diagram**
+
+![Circuit Diagram](https://github.com/MiDV81/Qiskit/blob/main/Captura%20de%20pantalla%202023-04-02%20a%20las%207.53.52.pngthetas = ParameterVector("theta",n_thetas))
+
+### **Requirements**
+
+[](https://aprendeconalf.es/docencia/python/manual/)
+[](https://numpy.org/doc/)
+[](https://matplotlib.org)
+
+
+### **Built with**
+
+
+Python: Language used for programming
+VSCode: Code editor to program
+
+
+### **License**
+
+This project is under the MIT License
+[](https://opensource.org/license/mit/)
+
+
+### **Suppport**
+Escola d'Enginyeria - UAB
+[](https://www.uab.cat/enginyeria/)
+IBM Quantum
+[](https://quantum-computing.ibm.com/composer/files/f130b532a43fcbfc655fa49d0c9e82f19243be194211259ae675510796094d1f)
