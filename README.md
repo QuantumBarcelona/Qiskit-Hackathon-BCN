@@ -38,7 +38,7 @@ On the [How To Connect](How_To_Connect.ipynb) Notebook you can find some useful 
 | **Team 6** | IBM | **Team Mr. Worldwide** | Xiang Lin, Ireneo B. Ntutumu, Adrià Mateos, Diana Mirila, Omar Bajja |
 | **Team 7** | MOODY'S | **Team Mike Co.** | Miguel Carrasco Arango, Lucía Longo Balagué, Miguel Durán Vera, Iván Villar Naredo, Miguel Álvarez Hernane, Manuel Porrón Álvarez |
 | **Team 8** | MOODY'S | **Schrödinger Stonks** | Fran Adillón, Adrià Calm, Guillem Alvarez, Gerard Guarin, Rubén Ledesma, Arnau Fornaguera |
-| **Team 9** | ICFO | **Orangejuice** | Ana Sànchez, Derik Rochlitzen, Miquel Àngel Pérez, Pere Bancells, Thierry Nicolas Kaldenbach, Timon Scheiber |
+| **Team 9** | ICFO | **Orangejuice** | Ana Sànchez, Derik Rochlitzer, Miquel Àngel Pérez, Pere Bancells, Thierry Nicolas Kaldenbach, Timon Scheiber |
 | **Team 10** | BSC | **ANSGAM** | Ainhoa Castaño, Sergi Bons, Nil Fernandez, Marc Subirà, Aleix Llenas, Guillermo Abad |
 | **Team 11** | ICFO | **33** | Carlos Ramon Escandell, Eric Vidal, Marc Farreras, Enrique Naranjo, Francesc Sabater, Pau Fargas |
 | **Team 12** | IBM | **Team Coyotech** | Juan Manuel Camara, Juan Carlos Martinez, Miguel del Arco, Christian Ferre, Daniel Suarez, Luis Fernando Paz |
